@@ -1,0 +1,261 @@
+#ulmenu > li:nth-child(2) a{  /*SE CAMBIA EL SELECTED*/
+
+    font-weight: bold;
+}
+
+#cajatienda{
+    
+    
+    margin-bottom: 50px;
+    padding: 10px 50px;
+ 
+    border-radius: 5px;
+
+}
+
+#cajatienda > h1{
+
+    color: black;
+
+}
+
+.accordion-button{
+
+    color: var(--colormain);
+
+}
+
+.accordion-button:focus{
+
+    background-color: var(--colormain);
+    color: white;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed){
+
+    background-color: var(--colormain);
+    color: white;
+    box-shadow: none;
+
+}
+
+.accordion-button:active{
+
+    box-shadow: none;
+
+}
+
+.card{
+
+    margin: auto;
+   
+    border: none;
+
+    display: inline;
+
+}
+
+.card-body{
+
+    border: solid 1px rgb(192, 192, 192);
+    
+
+}
+
+.btn{
+
+    background-color: var(--colormain);
+    border: none;
+    transform: All 0.5s;
+
+}
+
+.btn:hover{
+
+    background-color: var(--colormainhover);
+
+}
+
+.btn:focus{
+
+    background-color: var(--colormainhover);
+    box-shadow: none;
+
+}
+
+.row{
+
+    margin-top: 20px;
+    
+
+}
+
+#carrito{
+    
+   
+    margin-bottom: 50px;
+    padding: 10px 50px;
+ 
+  
+
+    border-left: solid 1px;
+
+   /* background-color: var(--fondocajas) */
+
+}
+
+#carrito > h1{
+
+    color: black;
+
+}
+
+#carrito > h1 > svg{
+
+    width: 40px;
+    height: 40px;
+
+    margin-top: -13px;
+
+}
+
+
+.card-body{
+
+    background-color: white;
+    
+
+}
+
+.card-body > h5{
+
+    text-align: center;
+
+}
+
+
+
+.card-carrito{
+
+    margin-bottom: 15px;
+
+}
+
+.precio,.precio:hover{
+
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    
+    width: 100%;
+    margin-top:10px;
+    padding: 5px;
+
+    border-radius: 0.25rem;
+    background-color: var(--fondocajas);
+    
+
+}
+
+.btn-group{
+
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+
+.pbt, .pbt:hover, .pbt:focus{
+
+    background-color: var(--fondocajas); color: black;font-weight: bold;
+    
+}
+
+#carrito > a > svg{
+
+    margin-top: -6px;
+    margin-right: 10px;
+
+}
+.card-img-top{
+    height:120px;
+}
+
+@media screen and (max-width: 990px){
+
+    #cajatienda{
+
+        padding: 0;
+        margin: 0;
+        width: 100%;
+
+    }
+
+    h1, .card-title{
+
+        font-size: var(--tamanomovilh1)
+
+    }
+
+    .col-lg-4{
+
+        margin-bottom: 70px;
+
+    }
+    
+
+    .card-text, .btn{
+
+        font-size: var(--tamanomovilp);
+
+    }
+
+    .btn{
+
+        width: 100%;
+        margin: 5px;
+
+    }
+
+    .accordion-button{
+
+        font-size: var(--tamanomovilp);
+
+    }
+
+    #carrito > div > div > div > button > svg{
+
+        width: 35px;
+        height: 35px;
+
+    }
+
+    #carrito > div > div > h5{
+
+        font-size: var(--tamanomovilp);
+
+    }
+
+    #carrito > a > svg{
+
+        margin-top: -10px;
+        width: 35px;
+        height: 35px;
+
+    }
+
+    #carrito > h3{
+
+        font-size: var(--tamanomovilh1);
+
+    }
+   
+
+    #carrito{
+
+        border: none;
+
+    }
+
+}

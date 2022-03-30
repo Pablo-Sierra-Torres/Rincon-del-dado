@@ -1,0 +1,336 @@
+/*CONTENEDOR DEL HEADER*/
+
+*{
+
+    padding: 0;
+    margin: 0;
+
+}
+
+
+
+
+
+#ulmenu > li:nth-child(1) a{  /*SE CAMBIA EL SELECTED*/
+
+    font-weight: bold;
+}
+
+
+
+
+/*SLIDER*/
+
+#carouselExampleCaptions{
+
+    padding: 40px 80px 0px 80px;
+
+}
+
+.carousel-caption{
+
+    background-color: black;
+    border-radius: 0.25rem;
+    opacity: 95%;
+
+
+}
+
+.botonslider{
+
+    background-color: var(--colormain);
+    border-radius: 0.25rem;
+    padding: 5px 10px 5px 10px;
+    font-size: 18px;
+
+}
+
+/*TARJETAS*/
+
+#contendor3tarjetas{
+    margin-top: 80px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-bottom: solid 1px;
+}
+
+.tarjeta{
+
+    width: 100%;
+    border-radius: 0.25rem;
+    text-align: center;
+    color: black;
+    margin-bottom: 100px;
+
+}
+
+.tarjeta > p{
+
+    padding: 20px;
+    font-size: 20px;
+
+}
+
+.botontri{
+
+    background-color: var(--colormain);
+    padding: 15px;
+    color: white;
+    border-radius: 0.25rem;
+    position: relative;
+    transition: background-color 0.5s;
+    top: 20px;
+
+}
+
+
+.botontri:hover{
+
+    background-color: var(--colormainhover);
+
+}
+
+/*COLOR DE LOS ICONOS DE LAS TARJETAS*/
+#contendor3tarjetas > div > div > div > div > svg{
+
+    color: var(--colormain);
+
+}
+
+
+/*FORM Y EXPERINCIAS*/
+/*FORM*/
+
+#form {
+
+   
+    
+    margin-bottom: 120px;
+
+}
+
+#exps{
+
+ 
+   
+    margin-bottom: 20px;
+
+}
+
+textarea{
+
+    height: 150px;
+
+}
+
+#botonform{
+
+    background-color: var(--colormain);
+    color: white;
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 0.25rem;
+    text-align: center;
+    transition: all 0.5s;
+
+}
+
+#botonform:hover{
+
+    background-color: var(--colormainhover);
+
+}
+/*EXPERIENCIAS*/
+ 
+.resena{
+
+    padding-left: 30px;
+    
+    border-radius: 0.25rem;
+    margin-bottom: 15px;
+
+}
+
+#exps > h1{
+
+    padding-left: 30px;
+    margin-bottom: 35px;
+    color: black;
+
+
+}
+
+span.input-group-text{
+
+    color: white;
+    background-color: var(--colormain);
+
+}
+
+
+
+
+@media screen and (max-width: 990px){
+
+    /*ADAPTACIÓN DEL HEADER PARA DISPOSITIVOS MOVILES*/
+
+    #cabecera{
+
+        height: 150px;
+
+    }
+
+    #cabecera > h1{
+
+        font-size: 65px;
+        padding-top: 31px;
+
+    }
+
+    /*ADAPTACIÓN MENÚ*/
+
+    #navegacion{
+
+        height: 90px;
+        padding-top: 9px;
+
+    }
+
+    .menuitem{
+
+        font-size: 35px;
+       
+
+    }
+
+    /*ADAPTACIÓN DE TARJETAS PARA DISPOSITIVOS MOVILES*/
+
+    .tarjeta{
+
+        position: relative;
+        width: 130%;
+        margin-left: -100px;
+        margin-bottom: 150px;
+
+    }
+
+    .tarjeta > p{
+        
+        font-size: 35px;
+        width: 100%;
+
+    }
+
+    .tarjeta > h1{
+
+        font-size: 60px;
+
+    }
+
+    /*ADAPTACION DE CUENTANOS Y RESEÑAS*/
+
+    #form{
+
+        border-bottom: solid 1px;
+        margin-bottom:  0;
+        padding-bottom:  80px;
+
+        
+        
+
+    }
+
+    #form > h1{
+
+        font-size: 60px;
+        
+
+    }
+
+    #form > h4{
+
+        font-size: 40px;
+
+    }
+
+    input.form-control{
+
+       width: 100%;
+       height: 70px;
+       font-size: 35px;
+
+    }
+
+    span.input-group-text{
+
+        font-size: 35px;
+        color: white;
+        background-color: var(--colormain);
+
+    }
+
+    textarea.form-control{
+
+        font-size: 35px;
+        height: 300px;
+
+    }
+
+    #basic-addon1 > svg{
+        width: 35px;
+        height: 35px;
+
+    }
+
+    #form > div:nth-child(5) > span:nth-child(1) > svg{
+
+        width: 35px;
+        height: 35px;
+
+    }
+
+    .resena{
+
+        text-align: center;
+        margin-bottom: 75px;
+
+    }
+
+    #exps > h1{
+
+        font-size: 60px;
+        text-align: center;
+        margin-bottom: 30px;
+        padding-top: 60px;
+
+    }
+
+    .resena > h5{
+
+        font-size: 45px;
+
+    }
+
+    .resena > p{
+
+        font-size: 35px;
+
+    }
+
+
+    .botontri{
+
+        font-size: 40px;
+        padding: 15px 50px 20px 50px;
+
+    }
+
+    
+
+}
+
+
+
+
+

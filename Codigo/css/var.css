@@ -1,0 +1,19 @@
+:root {
+
+    /*#266AA8 COLOR INICIAL*/
+    --colormain: rgb(192, 28, 28);
+
+
+    /*#12314e COLOR HOVER INICIAL*/
+    --colormainhover: rgb(114, 22, 22);
+
+    /*COLOR DE LAS CAJAS*/
+    --fondocajas: rgb(221, 221, 221);
+
+    /*FONTSIZE MOVIL H1*/
+    --tamanomovilh1: 60px;
+
+    /*FONTSIZE MOVIL P*/
+    --tamanomovilp: 35px;
+
+}

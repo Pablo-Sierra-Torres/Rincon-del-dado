@@ -1,0 +1,183 @@
+@colortexto: white;
+@colortextohover: grey;
+@colorfondo: rgb(192, 28, 28);
+@colorfondohover: rgb(114, 22, 22);
+@tamanomovilh1: 60px;
+@tamanomovilp: 35px;
+
+.cuerpoBasico(){
+
+    background-color: @colorfondo;
+    color: @colortexto;
+    text-align: center;
+}
+
+footer {
+
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  
+    .cuerpoBasico()
+
+}
+
+#menufooter{
+
+    text-align: left;
+
+}
+
+#menufooter > ul{
+
+    padding-top: 15px;
+
+}
+
+#menufooter > ul > li{
+
+    display: inline;
+
+}
+
+#menufooter > ul > li > a{
+
+    .cuerpoBasico();
+    margin-left: 20px;
+    transition: 1s all;
+
+}
+
+#menufooter > ul > li > a:hover{
+
+    color: @colortextohover;
+
+}
+
+#socialfooter{
+
+    text-align: right;
+}
+
+#socialfooter > ul{
+
+    padding-top: 15px;
+
+}
+
+#socialfooter > ul > li{
+
+    display: inline;
+    margin-right: 20px;
+
+}
+
+#socialfooter > ul > li > a{
+
+    display: inline;
+    margin-right: 20px;
+    color: @colortexto;
+    transition: 1s all;
+
+}
+
+#copyright{
+
+    padding-left: 60px;
+    text-align: center;
+
+}
+
+#socialfooter > ul > li > a:hover{
+
+    color: @colortextohover;
+
+}
+
+
+@media screen and (max-width: 990px){
+
+    #copyright{
+
+        .cuerpoBasico();
+        width: 100%;
+        font-size: 24px;
+        
+
+    }
+
+    #footer{
+
+        padding: 0px;
+        margin: 0px;
+
+    }
+
+    #menufooter > ul{
+
+        text-align: center;
+        margin: 0;
+        padding: 20px 0px 10px 0px;
+        margin: 0px -30px 0px 0px;
+
+    }
+
+    #menufooter > ul > li{
+
+        margin-right: 10px;
+
+    }
+
+    #menufooter > ul > li > a{
+
+        margin-left: 0px;
+        font-size: 25px;
+
+    }
+
+    #socialfooter{
+
+        text-align: center;
+
+    }
+
+    #socialfooter > ul{
+
+        margin: 0px -30px 0px 0px;
+        padding: 10px 0px 20px 0px;
+
+    }
+
+    #socialfooter > ul > li{
+
+       margin-right: 10;
+        
+
+    }
+
+    #socialfooter > ul > li > a{
+
+        
+        margin: 0;
+        font-size: 25px;
+       
+
+    }
+
+    #socialfooter > ul > li > svg{
+
+        width: 25px;
+        height: 25px;
+        margin-top: -7px;
+       
+
+    }
+
+   
+
+   
+
+    
+
+}

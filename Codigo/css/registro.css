@@ -1,0 +1,172 @@
+#cajalogin{
+
+    position: relative;
+    top: 30px;
+    
+    margin: auto;
+    margin-bottom: 100px;
+    padding: 50px;
+    width: 50%;
+    background-color: rgb(221, 221, 221);
+    border-radius: 5px;
+    
+}
+
+.enlace{
+
+    color: var(--colormain)
+
+}
+
+.enlace:hover{
+
+    color: var(--colormainhover)
+
+}
+
+.btn-danger{
+
+    margin-top:15px;
+    background-color: var(--colormain);
+
+}
+
+.btn-danger:hover{
+
+
+    background-color: var(--colormain);
+
+}
+
+#cajalogin > form > button:hover{
+
+    background-color: var(--colormainhover);
+
+}
+
+footer{
+
+    position: relative;
+
+}
+
+#trampa{
+
+    position: relative;
+    width: 100%;
+    height: 220px;
+
+}
+
+#cajalogin > form > div > span{
+
+    color: white;
+    background-color: var(--colormain);
+
+}
+/*Fran metió mano aqui*/
+#cajalogin > form > div > div > div > span{
+    color: white;
+    background-color: var(--colormain);
+
+}
+.ticks{
+    margin-bottom:5px;
+}
+
+
+@media screen and (max-width: 990px){
+
+
+    #trampa{
+
+        display: none;
+
+    }
+    
+    #cajalogin{
+
+        width: 100%;
+        padding: 100px;
+
+        margin-top: 100px;
+        margin-bottom: 200px;   
+
+    }
+
+    .enlace{
+
+        color: var(--colormain)
+    
+    }
+    
+    .enlace:hover{
+    
+        color: var(--colormainhover)
+    
+    }
+
+    #cajalogin > h2{
+
+        font-size: 65px;
+
+    }
+
+    p, a, h5{
+
+        font-size: 35px;
+
+    }
+
+    input.form-control{
+
+        width: 100%;
+        height: 70px;
+        font-size: 35px;
+ 
+    }
+ 
+    #cajalogin > form > div > span > svg{
+
+        width: 35px;
+        height: 35px;
+
+    }
+
+    #cajalogin > form > div > div >div > span > svg{
+
+        width: 35px;
+        height: 35px;
+
+    }
+
+    .ticks{
+        font-size:35px;
+        margin-bottom:15px;
+    }
+    input[type=checkbox]{
+        width:30px;
+        height:30px;
+    }
+    .btn-danger{
+        margin-top:15px;
+        font-size: 35px;
+        padding: 10px 20px 10px 20px
+
+    }
+
+    #pcopy{
+
+        font-size: 24px;
+
+    }
+
+    footer{
+
+        position: relative;
+        z-index: -1;
+        
+    }
+
+
+}
