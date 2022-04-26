@@ -1,33 +1,27 @@
 <?php 
-    include_once("conexion.php");
+    include_once "conexion.php";
 
     //Insert insetar productos
 
-    public function nuevoProducto($nombre,$apellidos,$email,$password,$codigo_postal,$poblacion,$direccion,$telefonofijo,$telefono_movil,$notificaciones) {
+    public function nuevoProducto($nombre,$descripcion,$imagen,$precio,$cantidad,$categoria) {
         try{
             $db = getDB();
-            $st = $db->prepare("SELECT IDUsuarios FROM usuarios WHERE Correo=:email"); 
-            $st->bindParam("email", $email,PDO::PARAM_STR);
+            $st = $db->prepare("SELECT Nombre FROM productos WHERE Nombre=:nombre"); 
+            $st->bindParam("nombre", $nombre,PDO::PARAM_STR);
             $st->execute();
             $count=$st->rowCount();
             if($count<1)
             {
-            $stmt = $db->prepare("INSERT INTO usuarios(Nombre,Apellidos,Correo,Pass,CodPos,Poblacion,Direccion,Telefijo,Telemovil,Notificaciones) VALUES (:nombre,:apellidos,:email,:hash_password,:codigo_postal,:poblacion,:direccion,:telefono_fijo,:telefono_movil,:notificaciones)");
+            $stmt = $db->prepare("INSERT INTO productos(Nombre,Descripcion,Imagen,Precio,Cantidad,Categoria) VALUES (:nombre,:descripcion,:imagen,:precio,:cantidad,:categoria)");
             $stmt->bindParam("nombre", $nombre,PDO::PARAM_STR);
-            $stmt->bindParam("apellidos", $apellidos,PDO::PARAM_STR);
-            $stmt->bindParam("email", $email,PDO::PARAM_STR);
-            $hash_password= hash('sha256', $password); //Password encryption
-            $stmt->bindParam("hash_password", $hash_password,PDO::PARAM_STR);
-            $stmt->bindParam("codigo_postal", $codigo_postal,PDO::PARAM_STR);
-            $stmt->bindParam("poblacion", $poblacion,PDO::PARAM_STR);
-            $stmt->bindParam("direccion", $direccion,PDO::PARAM_STR);
-            $stmt->bindParam("telefono_fijo", $telefono_fijo,PDO::PARAM_STR);
-            $stmt->bindParam("telefono_movil", $telefono_movil,PDO::PARAM_STR);
-            $stmt->bindParam("notificaciones", $notificaciones,PDO::PARAM_STR);
+            $stmt->bindParam("descripcion", $descripcion,PDO::PARAM_STR);
+            $stmt->bindParam("imagen", $imagen,PDO::PARAM_STR);
+            $stmt->bindParam("precio", $precio,PDO::PARAM_STR);
+            $stmt->bindParam("cantidad", $cantidad,PDO::PARAM_STR);
+            $stmt->bindParam("ctegoria", $categoria,PDO::PARAM_STR);
             $stmt->execute();
             $id=$db->lastInsertId(); // Last inserted row id
             $db = null;
-            $_SESSION['id']=$id;
             return true;
             }
             else
@@ -43,6 +37,40 @@
 
     }
 
+    //Select mostrar productos por categoria
+    public function mostrarProductos($categoria) {
+        try{
+            $db = getDB();
+            $stmt = $db->prepare("SELECT Nombre,Imagen,Precio,Cantidad FROM productos WHERE Nombre=:nombre"); 
+            $stmt->bindParam("nombre", $nombre,PDO::PARAM_INT);
+            $stmt->execute();
+            $data = $stmt->fetch(PDO::FETCH_OBJ); //User data
+            return $data;
+            }
+            catch(PDOException $e) {
+            echo '{"error":{"text":'. $e->getMessage() .'}}';
+            }
+        }
+
+    }
+    
+
+    //Select mostrar productos en carrito
+    public function productoCarrito($nombre) {
+        try{
+            $db = getDB();
+            $stmt = $db->prepare("SELECT Nombre,Imagen,Precio,Cantidad FROM productos WHERE Nombre=:nombre"); 
+            $stmt->bindParam("nombre", $nombre,PDO::PARAM_INT);
+            $stmt->execute();
+            $data = $stmt->fetch(PDO::FETCH_OBJ); //User data
+            return $data;
+            }
+            catch(PDOException $e) {
+            echo '{"error":{"text":'. $e->getMessage() .'}}';
+            }
+        }
+
+    }
 
     //Delete borrar productos
 

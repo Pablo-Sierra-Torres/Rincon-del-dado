@@ -8,6 +8,7 @@ CREATE TABLE Productos (
   Imagen VARCHAR(500) NULL,
   Precio INTEGER UNSIGNED NULL,
   Cantidad INTEGER UNSIGNED NULL,
+  Categoria VARCHAR(45) NULL,
   PRIMARY KEY(Nombre)
 );
 
@@ -49,12 +50,13 @@ CREATE TABLE Reservas (
 );
 
 CREATE TABLE Compra (
+	IDCompra INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   Usuarios_IDUsuarios INTEGER UNSIGNED NOT NULL,
   Productos_Nombre VARCHAR(500) NOT NULL,
-  IDCompra INTEGER UNSIGNED NOT NULL,
   Dia DATE NULL,
   Hora DATETIME NULL,
-  PRIMARY KEY(Usuarios_IDUsuarios, Productos_Nombre),
+  Precio INTEGER NULL,
+  PRIMARY KEY(IDCompra, Usuarios_IDUsuarios, Productos_Nombre),
   FOREIGN KEY(Productos_Nombre)
     REFERENCES Productos(Nombre),
   FOREIGN KEY(Usuarios_IDUsuarios)
