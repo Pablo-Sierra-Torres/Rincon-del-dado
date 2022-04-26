@@ -3,6 +3,8 @@
 
     //Insert insetar productos
     class Producto {
+
+
         public function nuevoProducto($nombre,$descripcion,$imagen,$precio,$cantidad,$categoria) {
             try{
                 $db = getDB();
@@ -51,9 +53,9 @@
                 catch(PDOException $e) {
                 echo '{"error":{"text":'. $e->getMessage() .'}}';
                 }
-            }
-
         }
+
+        
         
 
         //Select mostrar productos en carrito
@@ -70,8 +72,6 @@
                 catch(PDOException $e) {
                 echo '{"error":{"text":'. $e->getMessage() .'}}';
                 }
-            }
-
         }
 
         //Update para compra (cantidad a reducir)
@@ -96,8 +96,6 @@
                 catch(PDOException $e) {
                 echo '{"error":{"text":'. $e->getMessage() .'}}';
                 }
-            }
-
         }
 
 
@@ -123,8 +121,6 @@
                 catch(PDOException $e) {
                 echo '{"error":{"text":'. $e->getMessage() .'}}';
                 }
-            }
-
         }
 
         //Delete borrar productos
@@ -139,9 +135,7 @@
                 catch(PDOException $e) {
                 echo '{"error":{"text":'. $e->getMessage() .'}}';
                 }
-            }
-
         }
-    }    
+}  
 
 ?>
