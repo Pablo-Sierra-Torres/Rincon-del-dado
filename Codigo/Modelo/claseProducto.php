@@ -128,5 +128,19 @@
     }
 
     //Delete borrar productos
+    public function productoBorrar($nombre) {
+        try{
+            $db = getDB();
+            $stmt = $db->prepare("DELETE FROM productos where Nombre=:nombre"); 
+            $stmt->bindParam("nombre", $nombre,PDO::PARAM_STR);
+            $stmt->execute();
+            $db = null;
+        }
+            catch(PDOException $e) {
+            echo '{"error":{"text":'. $e->getMessage() .'}}';
+            }
+        }
+
+    }
 
 ?>
