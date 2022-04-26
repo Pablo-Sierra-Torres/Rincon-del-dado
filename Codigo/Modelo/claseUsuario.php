@@ -15,7 +15,7 @@
                 $db = null;
                 if($count)
                 {
-                $_SESSION['id']=$data->id; // Storing user session value
+                $_SESSION['id']=$data->IDUsuarios; // Storing user session value
                 return true;
                 }
                 else
@@ -52,7 +52,7 @@
                 $stmt->execute();
                 $id=$db->lastInsertId(); // Last inserted row id
                 $db = null;
-                $_SESSION['id']=$id;
+                $_SESSION['id']=$IDUsuarios;
                 return true;
                 }
                 else

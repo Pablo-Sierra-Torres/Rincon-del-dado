@@ -44,6 +44,8 @@ CREATE TABLE Reservas (
   Usuarios_IDUsuarios INTEGER UNSIGNED NOT NULL,
   Dia DATE NULL,
   Hora DATETIME NULL,
+  Titular VARCHAR(45) NULL,
+  Participantes VARCHAR(45) NULL,
   PRIMARY KEY(IDReservas, Usuarios_IDUsuarios),
   FOREIGN KEY(Usuarios_IDUsuarios)
     REFERENCES Usuarios(IDUsuarios)
