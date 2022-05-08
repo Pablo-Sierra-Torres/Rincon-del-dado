@@ -50,7 +50,7 @@
                 $stmt->bindParam("telefono_movil", $telefono_movil,PDO::PARAM_STR);
                 $stmt->bindParam("notificaciones", $notificaciones,PDO::PARAM_STR);
                 $stmt->execute();
-                $id=$db->lastInsertId(); // Last inserted row id
+                $IDUsuarios=$db->lastInsertId(); // Last inserted row id
                 $db = null;
                 $_SESSION['id']=$IDUsuarios;
                 return true;
