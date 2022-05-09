@@ -8,17 +8,17 @@
        
         <meta charset="UTF-8">
 
-        <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
-		    <script src="../bootstrap/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../Vista/bootstrap/css/bootstrap.min.css">
+		    <script src="../Vista/bootstrap/js/bootstrap.min.js"></script>
 
-        <link rel="stylesheet" href="../css/var.css">
-        <link rel="stylesheet" href="../css/cabecera.css">
-        <link rel="stylesheet" href="../css/footer.css">
-        <link rel="stylesheet" href="../css/registro.css">
+        <link rel="stylesheet" href="../Vista/css/var.css">
+        <link rel="stylesheet" href="../Vista/css/cabecera.css">
+        <link rel="stylesheet" href="../Vista/css/footer.css">
+        <link rel="stylesheet" href="../Vista/css/registro.css">
         
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-        <script defer src="../javascript/slider.js"></script>
-        <script defer src="../javascript/dados.js"></script>
+        <script defer src="../Vista/javascript/slider.js"></script>
+        <script defer src="../Vista/javascript/dados.js"></script>
 
 
     </head>
@@ -27,7 +27,7 @@
 
       <!--CABECERA-->
 
-      <?php include '../partes/cabecera.php';?>
+      <?php include '../Vista/partes/cabecera.php';?>
       
       <!--CUERPO-->
 
@@ -41,7 +41,7 @@
             <p>¿Ya eres miembro? <a href="login.php" class="enlace">Inicia Sesión</a></p>
             <hr>
 
-            <form>
+            <form method="POST" action="../../Controlador/inicio.php">
             <div class="row">  
                 <div class="col-lg-6">  
                     <h5>Nombre</h5>
@@ -159,7 +159,7 @@
                   <label class="ticks"><input type="checkbox" id="cbox1" value="first_checkbox"> Acepto <a href="#" class="enlace">las normas y condiciones de uso.</a></label><br>
                   <label class="ticks"><input type="checkbox" id="cbox2" value="second_checkbox"> Quiero recibir correos y publicidad sobre las novedades de la tienda.</label>                   
                 <br>
-              <button type="submit" class="btn btn-danger">Registrarme</button>
+              <button type="submit" class="btn btn-danger" name="registrar">Registrarme</button>
             </form>
 
 
@@ -170,7 +170,7 @@
       </div>
       <!--FOOTER-->
       
-      <?php include '../partes/footer.php';?> 
+      <?php include '../Vista/partes/footer.php';?> 
       
     </body>
 

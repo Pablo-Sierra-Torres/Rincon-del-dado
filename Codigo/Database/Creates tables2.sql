@@ -6,14 +6,14 @@ CREATE TABLE Productos (
   Nombre VARCHAR(500) NOT NULL,
   Descripcion VARCHAR(5000) NULL,
   Imagen VARCHAR(500) NULL,
-  Precio INTEGER UNSIGNED NULL,
-  Cantidad INTEGER UNSIGNED NULL,
+  Precio INTEGER  NULL,
+  Cantidad INTEGER  NULL,
   Categoria VARCHAR(45) NULL,
   PRIMARY KEY(Nombre)
 );
 
 CREATE TABLE Usuarios (
-  IDUsuarios INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  IDUsuarios INTEGER  NOT NULL AUTO_INCREMENT,
   Nombre VARCHAR(45) NULL,
   Apellidos VARCHAR(45) NULL,
   Correo VARCHAR(45) NULL,
@@ -28,10 +28,10 @@ CREATE TABLE Usuarios (
 );
 
 CREATE TABLE Comentarios (
-  IDComentarios INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Usuarios_IDUsuarios INTEGER UNSIGNED NOT NULL,
+  IDComentarios INTEGER  NOT NULL AUTO_INCREMENT,
+  Usuarios_IDUsuarios INTEGER  NOT NULL,
   Texto VARCHAR(5000) NULL,
-  Valoracion INTEGER UNSIGNED NULL,
+  Valoracion INTEGER  NULL,
   Dia DATE NULL,
   Hora DATETIME NULL,
   PRIMARY KEY(IDComentarios, Usuarios_IDUsuarios),
@@ -40,8 +40,8 @@ CREATE TABLE Comentarios (
 );
 
 CREATE TABLE Reservas (
-  IDReservas INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Usuarios_IDUsuarios INTEGER UNSIGNED NOT NULL,
+  IDReservas INTEGER  NOT NULL AUTO_INCREMENT,
+  Usuarios_IDUsuarios INTEGER  NOT NULL,
   Dia DATE NULL,
   Hora DATETIME NULL,
   Titular VARCHAR(45) NULL,
@@ -52,8 +52,8 @@ CREATE TABLE Reservas (
 );
 
 CREATE TABLE Compra (
-	IDCompra INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Usuarios_IDUsuarios INTEGER UNSIGNED NOT NULL,
+	IDCompra INTEGER  NOT NULL AUTO_INCREMENT,
+  Usuarios_IDUsuarios INTEGER  NOT NULL,
   Productos_Nombre VARCHAR(500) NOT NULL,
   Dia DATE NULL,
   Hora DATETIME NULL,
@@ -65,4 +65,4 @@ CREATE TABLE Compra (
     REFERENCES Usuarios(IDUsuarios)
 );
 
-
+INSERT INTO usuarios(Nombre,Apellidos,Correo,Pass,CodPos,Poblacion,Direccion,Telefijo,Telemovil,Notificaciones) VALUES ('admin','admin','superusuario"gmail.com','03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4','28015','Madrid','Calle de la Esperanza','913456367','623456723','0')
