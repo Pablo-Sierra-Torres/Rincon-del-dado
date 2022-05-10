@@ -28,7 +28,7 @@
                 }
         }
 
-        public function registerUsuario($nombre,$apellidos,$email,$password,$codigo_postal,$poblacion,$direccion,$telefonofijo,$telefono_movil,$notificaciones) {
+        public function registerUsuario($nombre,$apellidos,$email,$password,$codigo_postal,$poblacion,$direccion,$telefono_fijo,$telefono_movil,$notificaciones) {
             try{
                 $db = getDB();
                 $st = $db->prepare("SELECT IDUsuarios FROM usuarios WHERE Correo=:email"); 
@@ -71,7 +71,7 @@
         public function detallesUsuario($id) {
             try{
                 $db = getDB();
-                $stmt = $db->prepare("SELECT Nombre,Apellidos,Correo,Pass,CodPos,Poblacion,Direccion,Telefijo,Telemovil FROM usuarios WHERE IDUsuarios=:id"); 
+                $stmt = $db->prepare("SELECT Nombre,Apellidos,Correo,Pass,CodPos,Poblacion,Direccion,Telefijo,Telemovil,ImagenUsuario FROM usuarios WHERE IDUsuarios=:id"); 
                 $stmt->bindParam("id", $id,PDO::PARAM_INT);
                 $stmt->execute();
                 $data = $stmt->fetch(PDO::FETCH_OBJ); //User data
