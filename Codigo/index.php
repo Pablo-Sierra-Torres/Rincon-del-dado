@@ -1,3 +1,3 @@
 <?php 
-    header('Location: Controlador/inicio.php');
+    header('Location: Controlador/ControladorRegister.php');
 ?>
