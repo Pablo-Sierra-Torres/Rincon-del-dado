@@ -133,6 +133,7 @@ textarea{
     border-radius: 0.25rem;
     text-align: center;
     transition: all 0.5s;
+    font-size: 24px;
 
 }
 

@@ -1,8 +1,6 @@
-<?php 
+<?php
+session_start(); 
 include_once 'controladorSesion.php';
-
-session_start();
-
 if (validarSesion()) {
     $sesionUsuario = unserialize($_SESSION['login']);
     //Aqui iria la vista perfil

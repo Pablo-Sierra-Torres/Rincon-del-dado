@@ -8,26 +8,26 @@
        
         <meta charset="UTF-8">
 
-        <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
-		    <script src="../bootstrap/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../Vista/bootstrap/css/bootstrap.min.css">
+		    <script src="../Vista/bootstrap/js/bootstrap.min.js"></script>
 
         
-        <link rel="stylesheet" href="../css/inicio.css">
-        <link rel="stylesheet" href="../css/var.css">
-        <link rel="stylesheet" href="../css/cabecera.css">
-        <link rel="stylesheet" href="../css/footer.css">
-        <link rel="stylesheet" href="../css/reservas.css">
+        <link rel="stylesheet" href="../Vista/css/inicio.css">
+        <link rel="stylesheet" href="../Vista/css/var.css">
+        <link rel="stylesheet" href="../Vista/css/cabecera.css">
+        <link rel="stylesheet" href="../Vista/css/footer.css">
+        <link rel="stylesheet" href="../Vista/css/reservas.css">
 
         
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-        <script defer src="../javascript/slider.js"></script>
-        <script defer src="../javascript/dados.js"></script>
+        <script defer src="../Vista/javascript/slider.js"></script>
+        <script defer src="../Vista/javascript/dados.js"></script>
 
 
 
         <script defer src="https://momentjs.com/downloads/moment-with-locales.js"></script>
 
-        <script defer src="../javascript/calendario.js"></script>
+        <script defer src="../Vista/javascript/calendario.js"></script>
 
     </head>
 
@@ -35,7 +35,7 @@
 
       <!--CABECERA-->
 
-      <?php include '../partes/cabecera.php';?>
+      <?php include '../Vista/partes/cabecera.php';?>
 
       <!--CUERPO-->
 
@@ -261,7 +261,7 @@
 
       <!--FOOTER-->
       
-      <?php include '../partes/footer.php';?> 
+      <?php include '../Vista/partes/footer.php';?> 
        
   </body>
 

@@ -2,9 +2,6 @@
 session_start();
 $error = false;
 
-include_once '../Vista/paginas/login.php';
-
-
     if (isset($_POST['enviar'])) {
         include_once '../Modelo/claseUsuario.php';
         include_once './controladorSesion.php';
@@ -22,6 +19,7 @@ include_once '../Vista/paginas/login.php';
         
     } else {
         $error = true;
+        include_once '../Vista/paginas/login.php';
     }
 
 ?>

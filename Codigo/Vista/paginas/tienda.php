@@ -8,17 +8,17 @@
        
         <meta charset="UTF-8">
 
-        <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
-		    <script src="../bootstrap/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../Vista/bootstrap/css/bootstrap.min.css">
+		    <script src="../Vista/bootstrap/js/bootstrap.min.js"></script>
 
-        <link rel="stylesheet" href="../css/var.css">
-        <link rel="stylesheet" href="../css/cabecera.css">
-        <link rel="stylesheet" href="../css/footer.css">
-        <link rel="stylesheet" href="../css/tienda.css">
+        <link rel="stylesheet" href="../Vista/css/var.css">
+        <link rel="stylesheet" href="../Vista/css/cabecera.css">
+        <link rel="stylesheet" href="../Vista/css/footer.css">
+        <link rel="stylesheet" href="../Vista/css/tienda.css">
         
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-        <script defer src="../javascript/slider.js"></script>
-        <script defer src="../javascript/dados.js"></script>
+        <script defer src="../Vista/javascript/slider.js"></script>
+        <script defer src="../Vista/javascript/dados.js"></script>
 
 
     </head>
@@ -27,7 +27,7 @@
 
       <!--CABECERA-->
 
-      <?php include '../partes/cabecera.php';?>
+      <?php include '../Vista/partes/cabecera.php';?>
 
       <!--CUERPO-->
 
@@ -63,7 +63,7 @@
                           <div class="col-lg-4">
 
                             <div class="card" style="width: 18rem;">
-                              <img src="../imgs/tienda/catan.png" class="card-img-top" alt="...">
+                              <img src="../Vista/imgs/tienda/catan.png" class="card-img-top" alt="...">
                               <div class="card-body">
                                 <h5 class="card-title">Catán</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -76,7 +76,7 @@
                           <div class="col-lg-4 tjt">
 
                             <div class="card" style="width: 18rem;">
-                              <img src="../imgs/tienda/karma.jpg" class="card-img-top" alt="...">
+                              <img src="../Vista/imgs/tienda/karma.jpg" class="card-img-top" alt="...">
                               <div class="card-body">
                                 <h5 class="card-title">Karmagan</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -89,7 +89,7 @@
                           <div class="col-lg-4">
 
                             <div class="card" style="width: 18rem;">
-                              <img src="../imgs/tienda/mascarade.jpg" class="card-img-top" alt="...">
+                              <img src="../Vista/imgs/tienda/mascarade.jpg" class="card-img-top" alt="...">
                               <div class="card-body">
                                 <h5 class="card-title">Mascarade</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -130,7 +130,7 @@
                           <div class="col-lg-4">
 
                             <div class="card" style="width: 18rem;">
-                              <img src="../imgs/tienda/monopoly.png" class="card-img-top" alt="...">
+                              <img src="../Vista/imgs/tienda/monopoly.png" class="card-img-top" alt="...">
                               <div class="card-body">
                                 <h5 class="card-title">Monopoly</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -143,7 +143,7 @@
                           <div class="col-lg-4">
 
                             <div class="card" style="width: 18rem;">
-                              <img src="../imgs/tienda/parchis.jpg" class="card-img-top" alt="...">
+                              <img src="../Vista/imgs/tienda/parchis.jpg" class="card-img-top" alt="...">
                               <div class="card-body">
                                 <h5 class="card-title">Parchis</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -156,7 +156,7 @@
                           <div class="col-lg-4">
 
                             <div class="card" style="width: 18rem;">
-                              <img src="../imgs/tienda/ajedrez.jpg" class="card-img-top" alt="...">
+                              <img src="../Vista/imgs/tienda/ajedrez.jpg" class="card-img-top" alt="...">
                               <div class="card-body">
                                 <h5 class="card-title">Ajedrez</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -197,7 +197,7 @@
                           <div class="col-lg-4">
 
                             <div class="card" style="width: 18rem;">
-                              <img src="../imgs/tienda/pokemon.jpg" class="card-img-top" alt="...">
+                              <img src="../Vista/imgs/tienda/pokemon.jpg" class="card-img-top" alt="...">
                               <div class="card-body">
                                 <h5 class="card-title">Pokemon</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -210,7 +210,7 @@
                           <div class="col-lg-4">
 
                             <div class="card" style="width: 18rem;">
-                              <img src="../imgs/tienda/yugi.jpg" class="card-img-top" alt="...">
+                              <img src="../Vista/imgs/tienda/yugi.jpg" class="card-img-top" alt="...">
                               <div class="card-body">
                                 <h5 class="card-title">Yu-Gi-Oh</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -223,7 +223,7 @@
                           <div class="col-lg-4">
 
                             <div class="card" style="width: 18rem;">
-                              <img src="../imgs/tienda/magic.jpg" class="card-img-top" alt="...">
+                              <img src="../Vista/imgs/tienda/magic.jpg" class="card-img-top" alt="...">
                               <div class="card-body">
                                 <h5 class="card-title">MAGIC The Gathering</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -260,7 +260,7 @@
             <hr>
 
             <div class="card" style="width: 18rem;">
-              <img src="../imgs/tienda/monopoly.png" class="card-img-top" alt="...">
+              <img src="../Vista/imgs/tienda/monopoly.png" class="card-img-top" alt="...">
               <div class="card-body">
 
                 <h5 class="card-title">Monopoly</h5>
@@ -294,11 +294,11 @@
               </div>
 
             </div>
-
+/Vista
             <hr>
 
             <div class="card" style="width: 18rem;">
-              <img src="../imgs/tienda/mascarade.jpg" class="card-img-top" alt="...">
+              <img src="../Vista/imgs/tienda/mascarade.jpg" class="card-img-top" alt="...">
               <div class="card-body">
 
                 <h5 class="card-title">Mascarade</h5>
@@ -352,7 +352,7 @@
 
       <!--FOOTER-->
       
-      <?php include '../partes/footer.php';?> 
+      <?php include '../Vista/partes/footer.php';?> 
        
     </body>
 

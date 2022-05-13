@@ -44,7 +44,7 @@
           <li><a itlist="itList_2" href="#"></a></li>
         </ul>
         <ul id="slider">
-          <li style="background-image: url('../imgs/slider/catan.png'); z-index:0; opacity: 1;">
+          <li style="background-image: url('../Vista/imgs/slider/catan.png'); z-index:0; opacity: 1;">
             <div class="content_slider" >
               <div>
                 <h2 class="h2slider">CATÁN, Nuestro TOP ventas</h2>
@@ -53,7 +53,7 @@
           </div>
             </div>
           </li>
-          <li style="background-image: url('../imgs/slider/warhammer.jpg'); ">
+          <li style="background-image: url('../Vista/imgs/slider/warhammer.jpg'); ">
             <div class="content_slider" >
               <div>
                 <h2 class="h2slider">Warhammer</h2>
@@ -62,7 +62,7 @@
           </div>
             </div>
           </li>
-          <li style="background-image: url('../imgs/slider/ofertas.jpg'); ">
+          <li style="background-image: url('../Vista/imgs/slider/ofertas.jpg'); ">
             <div class="content_slider" >
               <div>
                 <h2 class="h2slider">Ofertas y novedades</h2>
@@ -156,31 +156,31 @@
           <div id="form" class="col-lg-8">
 
             <h1 style="text-align: center; color: black">Cuentanos</h1>
-
+          <form action="controladorInicio.php" method="GET">
            <h4>Nombre</h4>
             <div class=" input-group mb-3">
               <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-person-fill" viewBox="0 0 16 16">
                 <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11z"/>
               </svg></span>
-              <input type="text" class="form-control" placeholder="Nombre: Juán" aria-label="Username" aria-describedby="basic-addon1">
+              <input type="text" class="form-control" placeholder="Nombre: Juán" aria-label="Username" aria-describedby="basic-addon1" name="nombre">
             </div>
             <h4>Correo eléctronico</h4>
             <div class="input-group mb-3">
               <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
                 <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
               </svg></span>
-              <input type="text" class="form-control" placeholder="usuario" aria-label="Username">
+              <input type="text" class="form-control" placeholder="usuario" aria-label="Username" name="user">
               <span class="input-group-text">@</span>
-              <input type="text" class="form-control" placeholder="gmail.com" aria-label="Server">
+              <input type="text" class="form-control" placeholder="gmail.com" aria-label="Server" name="tipo_mail">
             </div>
 
             <div class="input-group">
               <span class="input-group-text">Tu comentario</span>
-              <textarea class="form-control" aria-label="With textarea" placeholder="Ejemplo: Me gustaría que mejoraran 'X' cosa pero me gusta la calidad del servicio"></textarea>
+              <textarea class="form-control" aria-label="With textarea" placeholder="Ejemplo: Me gustaría que mejoraran 'X' cosa pero me gusta la calidad del servicio" name="comentario"></textarea>
             </div>
 
-            <h4 id="botonform"><span>Enviar</span></h4>
-
+            <button id="botonform">Enviar</button>
+          </form>
           </div>
 
           <div id="exps" class="col-lg-4">

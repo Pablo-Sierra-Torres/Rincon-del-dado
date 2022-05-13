@@ -11,7 +11,7 @@ function getDB() {
         $dbConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $dbConnection;
     } catch (PDOException $e) {
-        echo 'Connection failed: ' . $e->getMessage();
+        include_once '../Vista/paginas/errorConexion.php';
     }
 }
 
