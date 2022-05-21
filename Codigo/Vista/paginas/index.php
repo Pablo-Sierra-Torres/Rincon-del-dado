@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html>
 
     <head>
@@ -29,7 +29,14 @@
 
       <!--CABECERA-->
 
-      <?php include '../Vista/partes/cabecera.php';?>
+      <?php
+        session_start();
+        if(validarSesion()){
+          include '../Vista/partes/cabeceraLogeado.php';
+        }else{
+          include '../Vista/partes/cabecera.php';
+        }
+       ?>
 
       <!--CUERPO-->
 
@@ -179,7 +186,7 @@
               <textarea class="form-control" aria-label="With textarea" placeholder="Ejemplo: Me gustaría que mejoraran 'X' cosa pero me gusta la calidad del servicio" name="comentario"></textarea>
             </div>
 
-            <button id="botonform">Enviar</button>
+            <button id="botonform" name="enviar">Enviar</button>
           </form>
           </div>
 

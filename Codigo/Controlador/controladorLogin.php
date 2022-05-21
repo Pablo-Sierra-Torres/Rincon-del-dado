@@ -8,7 +8,14 @@ $error = false;
         $usuario_logeado = new Usuario();
         if($usuario_logeado->loginUsuario($_POST['usuario'],$_POST['pass'])) {
             if(validarSesion()) {
-                $user=$usuario_logeado->detallesUsuario($_SESSION['id']);
+                
+                
+                $dataCookie=$usuario_logeado->detallesUsuario($_SESSION['id']);
+                $datos=serialize($dataCookie);
+                if (isset($_COOKIE['UsuarioLogeado'])) {
+                    setcookie("UsuarioLogeado",$datos,time()-3600);
+                }
+                setcookie("UsuarioLogeado",$datos,time()+3600,'/');
                 header('Location: ./controladorPerfil.php');
             }
             

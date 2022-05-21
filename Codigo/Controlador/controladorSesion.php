@@ -6,4 +6,12 @@ function validarSesion(){
     return false;
 }
 
+function cerrarSesion() {
+    session_unset();
+
+    session_destroy();
+
+    return true;
+}
+
 ?>
