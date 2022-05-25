@@ -27,7 +27,13 @@
 
       <!--CABECERA-->
 
-      <?php include '../Vista/partes/cabecera.php';?>
+      <?php
+        if(validarSesion()){
+          include '../Vista/partes/cabeceraLogeado.php';
+        }else{
+          include '../Vista/partes/cabecera.php';
+        }
+      ?>
 
       <!--CUERPO-->
 

@@ -27,7 +27,9 @@
 
       <!--CABECERA-->
 
-      <?php include '../Vista/partes/cabecera.php';?>
+      <?php 
+        include '../Vista/partes/cabecera.php';
+      ?>
       
       <!--CUERPO-->
 

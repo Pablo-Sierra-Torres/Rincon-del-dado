@@ -44,7 +44,7 @@
             try{
                 $db = getDB();
                 $stmt = $db->prepare("SELECT Nombre,Descripcion,Imagen,Precio,Cantidad FROM productos WHERE Categoria=:categoria"); 
-                $stmt->bindParam("categoria", $nombre,PDO::PARAM_STR);
+                $stmt->bindParam("categoria", $categoria,PDO::PARAM_STR);
                 $stmt->execute();
                 $data = $stmt->fetch(PDO::FETCH_OBJ); //User data
                 $db = null;
