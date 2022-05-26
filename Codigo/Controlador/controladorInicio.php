@@ -2,7 +2,6 @@
 include_once 'controladorSesion.php';
 include_once '../Modelo/claseComentario.php';
     if(isset($_COOKIE['UsuarioLogeado'])){
-        session_start();
         if (isset($_GET['enviar']) && validarSesion()) {
             
 

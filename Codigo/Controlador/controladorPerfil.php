@@ -7,7 +7,7 @@ if (validarSesion()) {
     include '../Vista/paginas/miPerfil.php';
 }
 else {
-    header('Location: ../Vista/paginas/index.php');
+    header('Location: ../index.php');
 }
 
 ?>
