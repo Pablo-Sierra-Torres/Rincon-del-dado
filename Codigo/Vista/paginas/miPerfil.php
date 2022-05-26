@@ -59,7 +59,7 @@
                         <div class="profile-img" style="width: 250px; height: 250px; background-size: cover; background-position: center; background-image: url('/<?= $url ?>');">
                         </div>*/
                     ?>
-                        <img src="../imgs/usuarios/default.png" class="imgPerfil" alt="...">
+                        <img src="../Vista/imgs/usuarios/default.png" class="imgPerfil" alt="...">
                         <br><br>
                         <button type="submit" class="btn btn-danger" name="subir">sube nueva imagen de perfil</button>
                     </div>
@@ -67,7 +67,7 @@
                 <div class="col-lg-5">  
                     <div class="row">  
                         <div class="col-lg-12">
-                            <h4>Nombre super nombrados<?php echo $datos->Nombre;?></h4>
+                            <h4>Nombre super nombrados <?php echo $datos->Nombre;?></h4>
                         </div>
                     </div>
                     <div class="row">        
@@ -90,19 +90,19 @@
             <div class="row">
                 <div class="col-lg-3"></div>   
                 <div class="col-lg-5">
-                    <h5>Email : mail@mail.com</h5>
+                    <h5>Email : <?php echo $datos->Correo;?></h5>
                 </div>
             </div>    
             <div class="row">
                 <div class="col-lg-3"></div>   
                 <div class="col-lg-5">
-                    <h5>T.Fijo : 915555555</h5>
+                    <h5>T.Fijo : <?php echo $datos->Telefijo;?></h5>
                 </div>
                 </div>    
             <div class="row">
                 <div class="col-lg-3"></div>    
                 <div class="col-lg-5">
-                    <h5>T.Movil : 605555555</h5>
+                    <h5>T.Movil : <?php echo $datos->Telemovil;?></h5>
                 </div>
             </div>
 
@@ -116,19 +116,19 @@
             <div class="row">
                 <div class="col-lg-3"></div>   
                 <div class="col-lg-5">
-                    <h5>Dirección : C/ de la Imaginacion 21 5º A</h5>
+                    <h5>Dirección : <?php echo $datos->Direccion;?></h5>
                 </div>
             </div>    
             <div class="row">
                 <div class="col-lg-3"></div>   
                 <div class="col-lg-5">
-                    <h5>Población : Madrid</h5>
+                    <h5>Población : <?php echo $datos->Poblacion;?></h5>
                 </div>
             </div>    
             <div class="row">
                 <div class="col-lg-3"></div>    
                 <div class="col-lg-5">
-                    <h5>Código postal : 28000</h5>
+                    <h5>Código postal : <?php echo $datos->CodPos;?></h5>
                 </div>
             </div>
             
