@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include_once 'controladorSesion.php';
 include_once '../Modelo/claseComentario.php';
     if(isset($_COOKIE['UsuarioLogeado'])){

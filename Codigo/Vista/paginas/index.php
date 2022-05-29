@@ -30,7 +30,7 @@
       <!--CABECERA-->
 
       <?php
-        session_start();
+        
         if(validarSesion()){
           include '../Vista/partes/cabeceraLogeado.php';
         }else{

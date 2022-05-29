@@ -8,7 +8,7 @@ function validarSesion(){
 
 function cerrarSesion() {
     session_unset();
-
+    
     session_destroy();
 
     return true;
