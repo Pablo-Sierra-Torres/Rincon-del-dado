@@ -6,7 +6,7 @@ CREATE TABLE Productos (
   Nombre VARCHAR(500) NOT NULL,
   Descripcion VARCHAR(5000) NULL,
   Imagen VARCHAR(500) NULL,
-  Precio INTEGER  NULL,
+  Precio VARCHAR(10) NOT NULL,
   Cantidad INTEGER  NULL,
   Categoria VARCHAR(45) NULL,
   PRIMARY KEY(Nombre)
@@ -65,4 +65,3 @@ CREATE TABLE Compra (
     REFERENCES Usuarios(IDUsuarios)
 );
 
-INSERT INTO usuarios(Nombre,Apellidos,Correo,Pass,CodPos,Poblacion,Direccion,Telefijo,Telemovil,Notificaciones) VALUES ('admin','admin','superusuario"gmail.com','03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4','28015','Madrid','Calle de la Esperanza','913456367','623456723','0')
