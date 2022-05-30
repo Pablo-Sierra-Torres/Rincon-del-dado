@@ -259,3 +259,9 @@
     }
 
 }
+
+#id-conf-compra {
+    position: absolute;
+    margin-top: -60rem;
+    z-index: 1;
+}
