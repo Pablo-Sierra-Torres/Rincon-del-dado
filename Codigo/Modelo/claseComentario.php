@@ -55,7 +55,7 @@
                 $db = getDB();
                 $stmt = $db->prepare("SELECT Usuarios_IDUsuarios,Texto,Valoracion,Dia,Hora FROM comentarios"); 
                 $stmt->execute();
-                $data = $stmt->fetch(PDO::FETCH_OBJ); //Valoracion data
+                $data = $stmt->fetch(PDO::FETCH_ASSOC); //Valoracion data
                 return $data;
                 }
                 catch(PDOException $e) {
@@ -69,7 +69,7 @@
                         $stmt = $db->prepare("SELECT Usuarios_IDUsuarios,Texto,Valoracion,Dia,Hora FROM comentarios where Valoracion=:valoracion");
                         $stmt->bindParam("valoracion", $valoracion,PDO::PARAM_STR); 
                         $stmt->execute();
-                        $data = $stmt->fetch(PDO::FETCH_OBJ); //Valoracion data
+                        $data = $stmt->fetch(PDO::FETCH_ASSOC); //Valoracion data
                         return $data;
                         }
                         catch(PDOException $e) {

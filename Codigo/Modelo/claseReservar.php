@@ -45,7 +45,7 @@
                 $db = getDB();
                 $stmt = $db->prepare("SELECT Usuarios_IDUsuarios,Dia,Hora,Titular,participantes FROM reservas"); 
                 $stmt->execute();
-                $data = $stmt->fetch(PDO::FETCH_OBJ); //User data
+                $data = $stmt->fetch(PDO::FETCH_ASSOC); //User data
                 return $data;
                 }
                 catch(PDOException $e) {
