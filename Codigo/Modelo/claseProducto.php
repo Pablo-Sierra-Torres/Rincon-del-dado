@@ -46,7 +46,7 @@
                 $stmt = $db->prepare("SELECT Nombre,Descripcion,Imagen,Precio,Cantidad FROM productos WHERE Categoria=:categoria"); 
                 $stmt->bindParam("categoria", $categoria,PDO::PARAM_STR);
                 $stmt->execute();
-                $data = $stmt->fetch(PDO::FETCH_OBJ); //User data
+                $data = $stmt->fetch(PDO::FETCH_ASSOC); //User data
                 $db = null;
                 return $data;
                 }
@@ -65,7 +65,7 @@
                 $stmt = $db->prepare("SELECT Nombre,Imagen,Precio,Cantidad FROM productos WHERE Nombre=:nombre"); 
                 $stmt->bindParam("nombre", $nombre,PDO::PARAM_STR);
                 $stmt->execute();
-                $data = $stmt->fetch(PDO::FETCH_OBJ); //User data
+                $data = $stmt->fetch(PDO::FETCH_ASSOC); //User data
                 $db = null;
                 return $data;
                 }
