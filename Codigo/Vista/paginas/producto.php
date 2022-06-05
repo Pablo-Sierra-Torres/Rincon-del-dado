@@ -68,7 +68,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                           <button class="btn btn-danger" data-target="html" id="btnToLeft">
-                              <img src="../Vista/imgs/recursos/left-arrow.png">
+                            <a href="../Controlador/controladorCompra.php"><img src="../Vista/imgs/recursos/left-arrow.png"></a>
                           </button>
                         </div> 
                     </div>
