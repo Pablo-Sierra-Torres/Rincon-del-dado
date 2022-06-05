@@ -62,10 +62,22 @@
                             <h6>texto de relleno número 3</h6>
                         </div>    
                     </div>
+                    <div class="row">
+                        <h3>39.99 €<h3> 
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                          <button class="btn btn-danger" data-target="html" id="btnToLeft">
+                              <img src="../Vista/imgs/recursos/left-arrow.png">
+                          </button>
+                        </div> 
+                    </div>
+                    <div class="row">
                         <div class="col-lg-12">
                             <button type="submit" id="comprarPro" class="btn btn-danger" name="subir">añadir al carrito</button>
                         </div> 
-                </div> 
+                    </div> 
+                  </div>  
             </div>
 
             </div>
@@ -74,11 +86,6 @@
 
       </div>
       
-                
-
-
-
-     
       <!--FOOTER-->
       
       <?php include '../Vista/partes/footer.php';?> 

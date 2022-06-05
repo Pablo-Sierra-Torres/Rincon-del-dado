@@ -10,8 +10,13 @@ h5{
     height: 50px;
     width:200px;
     position:relative;
-    top: 135px;
+    top: 45px;
     left:30px;
+}
+#btnToLeft{
+    position:relative;
+    top: 25px;
+    left:180px;
 }
 
 @media screen and (max-width: 990px){
