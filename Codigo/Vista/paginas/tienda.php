@@ -71,9 +71,9 @@
                           <div class="col-lg-4">
 
                             <div class="card" style="width: 18rem;">
-                              <img src="../Vista/imgs/tienda/catan.png" class="card-img-top" alt="...">
+                            <a href="../Controlador/controladorProducto.php"><img src="../Vista/imgs/tienda/catan.png" class="card-img-top" alt="..."></a>
                               <div class="card-body">
-                                <h5 class="card-title">Catán</h5>
+                              <a href="../Controlador/controladorProducto.php" style="color:black"><h5 class="card-title">Catán</h5></a>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-primary">Comprar 45,99€</a>
                               </div>
