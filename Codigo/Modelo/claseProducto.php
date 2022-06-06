@@ -46,7 +46,7 @@
                 $stmt = $db->prepare("SELECT Nombre,Descripcion,Imagen,Precio,Cantidad FROM productos WHERE Categoria=:categoria"); 
                 $stmt->bindParam("categoria", $categoria,PDO::PARAM_STR);
                 $stmt->execute();
-                $data = $stmt->fetch(PDO::FETCH_ASSOC); //User data
+                $data = $stmt->fetchAll(PDO::FETCH_CLASS); //User data
                 $db = null;
                 return $data;
                 }
@@ -59,13 +59,13 @@
         
 
         //Select mostrar productos en carrito
-        public function productoCarrito($nombre) {
+        public function productoPorNombre($nombre) {
             try{
                 $db = getDB();
-                $stmt = $db->prepare("SELECT Nombre,Imagen,Precio,Cantidad FROM productos WHERE Nombre=:nombre"); 
+                $stmt = $db->prepare("SELECT Nombre,Descripcion,Imagen,Precio,Cantidad,Categoria FROM productos WHERE Nombre=:nombre"); 
                 $stmt->bindParam("nombre", $nombre,PDO::PARAM_STR);
                 $stmt->execute();
-                $data = $stmt->fetch(PDO::FETCH_ASSOC); //User data
+                $data = $stmt->fetch(PDO::FETCH_OBJ); //User data
                 $db = null;
                 return $data;
                 }
