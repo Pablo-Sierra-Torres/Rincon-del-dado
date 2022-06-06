@@ -48,22 +48,22 @@
                 <div class="col-lg-2"></div> 
                 <div class="col-lg-5">  
                     <div class=" input-group mb-3">
-                        <img src="../Vista/imgs/tienda/catan.png" class="imgPerfil" alt="...">                       
+                        <img src="../Vista/imgs/tienda/<?php echo($productoSSS->Imagen)?>" class="imgPerfil" alt="...">                       
                     </div>
                 </div>
                 <div class="col-lg-5">  
                     <div class="row">  
                         <div class="col-lg-12">
-                            <h4>Nombre del producto</h4>
+                            <h4><?php echo($productoSSS->Nombre)?></h4>
                         </div>
                     </div>
                     <div class="row">        
                         <div class="col-lg-12">      
-                            <h6>texto de relleno número 3</h6>
+                            <h6><?php echo($productoSSS->Categoria)?></h6>
                         </div>    
                     </div>
                     <div class="row">
-                        <h3>39.99 €<h3> 
+                        <h3><?php echo($productoSSS->Precio)?> €<h3> 
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
@@ -88,7 +88,7 @@
             <div class="row" id="desTexto">  
                 <div class="col-lg-2"></div> 
                 <div class="col-lg-7">  
-                    <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+                    <p><?php echo($productoSSS->Descripcion)?></p>
                 </div>   
             </div>
 
