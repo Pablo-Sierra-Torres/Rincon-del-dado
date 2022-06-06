@@ -1,18 +1,13 @@
 boton = document.getElementById("botonform");
 boton.addEventListener('click',creaReserva)
 
-
-
-
 var dia;
 var mes;
-
+var diaCompleto;
 var selectEntrada;
 var horaEntrada;
-
 var selectSalida;
 var horaSalida;
-
 var nombre;
 var personas;
 
@@ -22,7 +17,8 @@ function creaReserva(){
 
      dia = document.getElementsByClassName("cal-day__day--selected")[0].innerHTML;
      mes = document.getElementsByClassName("cal-month__current")[0].innerHTML
-    
+     diaCompleto = dia + " " + mes;
+
      selectEntrada = document.getElementById('entrada');
      horaEntrada = selectEntrada.options[selectEntrada.selectedIndex];
     
@@ -32,11 +28,25 @@ function creaReserva(){
      nombre = document.getElementById('nombreInput');
     
     //si lo queremos como numero añadir parseInt al .value
+
     personas = document.getElementById('personasInput');
     if (asegurar() && validar()){
         
-        //creajson
+
+        /*añadir PHP y que inserte
+        nombre.value
+        dia+" de  "+mes
+        horaEntrada.value
+        horaSalida.value
+        personas.value
+        */
+
+        window.location.href = window.location.href + "?nombre=" + nombre.value + "&dia=" + diaCompleto + "&horaEntrada=" + horaEntrada.value + "&horaSalida=" + horaSalida.value + "&personas=" + personas.value;
+
+
         alert("reserva guardada")
+
+
     }
 
 }

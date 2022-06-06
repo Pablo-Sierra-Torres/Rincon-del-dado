@@ -29,14 +29,10 @@ CREATE TABLE Usuarios (
 
 CREATE TABLE Comentarios (
   IDComentarios INTEGER  NOT NULL AUTO_INCREMENT,
-  Usuarios_IDUsuarios INTEGER  NOT NULL,
-  Texto VARCHAR(5000) NULL,
-  Valoracion INTEGER  NULL,
-  Dia DATE NULL,
-  Hora DATETIME NULL,
-  PRIMARY KEY(IDComentarios, Usuarios_IDUsuarios),
-  FOREIGN KEY(Usuarios_IDUsuarios)
-    REFERENCES Usuarios(IDUsuarios)
+  Nombre VARCHAR(45) NULL,
+  Correo VARCHAR(45) NULL,
+  Texto VARCHAR(2000) NULL,
+  PRIMARY KEY(IDComentarios)
 );
 
 CREATE TABLE Reservas (
@@ -46,7 +42,7 @@ CREATE TABLE Reservas (
   HoraEntrada VARCHAR(45) NULL,
   HoraSalida VARCHAR(45) NULL,
   Participantes VARCHAR(45) NULL,
-  PRIMARY KEY(IDReservas),
+  PRIMARY KEY(IDReservas)
 );
 
 CREATE TABLE Compra (
