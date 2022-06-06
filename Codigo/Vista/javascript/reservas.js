@@ -44,6 +44,9 @@ function creaReserva(){
         window.location.href = window.location.href + "?nombre=" + nombre.value + "&dia=" + diaCompleto + "&horaEntrada=" + horaEntrada.value + "&horaSalida=" + horaSalida.value + "&personas=" + personas.value;
 
 
+
+
+
         alert("reserva guardada")
 
 
