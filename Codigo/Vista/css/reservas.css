@@ -61,16 +61,15 @@ body {
 .cal-month__next {
     right: 0;
 }
-.cal-month__current,h4 {
-    color:var(--colormain);
-    font-size: 40px;
+.cal-month__current {
+    color: var(--colormain);
+    font-size: 80px;
 }
 .cal-head__day, .cal-body__day {
     display: inline-block;
     width: 71px;
     height: 50px;
     font-size: 25px;
-    float: left;
 }
 .cal-body__week, .calendar__head {
     display: block;
@@ -111,6 +110,42 @@ body {
     border-radius: 50%;
     color: white;
 }
+
+
+
+
+
+
+
+h3 {
+    color:var(--colormain);
+    font-size:30px;
+}
+
+select,option{
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+
+}
+
+.row{
+    padding:10px;
+    }
+
+#formularioReservas{
+ position:relative;
+    top:150px
+}
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 990px){
 
@@ -163,11 +198,5 @@ body {
     
 
 }
-
-
-
-
-
-
 
 
