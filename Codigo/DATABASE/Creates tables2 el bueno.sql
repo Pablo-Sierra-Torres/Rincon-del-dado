@@ -41,14 +41,12 @@ CREATE TABLE Comentarios (
 
 CREATE TABLE Reservas (
   IDReservas INTEGER  NOT NULL AUTO_INCREMENT,
-  Usuarios_IDUsuarios INTEGER  NOT NULL,
-  Dia DATE NULL,
-  Hora DATETIME NULL,
-  Titular VARCHAR(45) NULL,
+  Nombre VARCHAR(45) NULL,
+  Dia VARCHAR(45) NULL,
+  HoraEntrada VARCHAR(45) NULL,
+  HoraSalida VARCHAR(45) NULL,
   Participantes VARCHAR(45) NULL,
-  PRIMARY KEY(IDReservas, Usuarios_IDUsuarios),
-  FOREIGN KEY(Usuarios_IDUsuarios)
-    REFERENCES Usuarios(IDUsuarios)
+  PRIMARY KEY(IDReservas),
 );
 
 CREATE TABLE Compra (
