@@ -31,7 +31,7 @@ body {
 }
 .calendar {
     position:relative;
-    width: 500px;
+    width: 550px;
     margin: 0;
    
 }
@@ -63,7 +63,7 @@ body {
 }
 .cal-month__current {
     color: var(--colormain);
-    font-size: 80px;
+    font-size: 40px;
 }
 .cal-head__day, .cal-body__day {
     display: inline-block;
@@ -74,7 +74,7 @@ body {
 .cal-body__week, .calendar__head {
     display: block;
     height: 70px;
-    width: 500px;
+    width: 550px;
 }
 .calendar__head {
     line-height: 50px;
