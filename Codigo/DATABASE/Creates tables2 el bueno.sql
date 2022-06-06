@@ -42,9 +42,9 @@ CREATE TABLE Comentarios (
 CREATE TABLE Reservas (
   IDReservas INTEGER  NOT NULL AUTO_INCREMENT,
   Nombre VARCHAR(45) NULL,
-  Dia DATE NULL,
-  Hora DATETIME NULL,
-  Titular VARCHAR(45) NULL,
+  Dia VARCHAR(45) NULL,
+  HoraEntrada VARCHAR(45) NULL,
+  HoraSalida VARCHAR(45) NULL,
   Participantes VARCHAR(45) NULL,
   PRIMARY KEY(IDReservas),
 );
