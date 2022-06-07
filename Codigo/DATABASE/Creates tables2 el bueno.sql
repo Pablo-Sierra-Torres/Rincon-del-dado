@@ -27,12 +27,12 @@ CREATE TABLE Usuarios (
   PRIMARY KEY(IDUsuarios)
 );
 
-CREATE TABLE Comentarios (
-  IDComentarios INTEGER  NOT NULL AUTO_INCREMENT,
+CREATE TABLE Reseñas (
+  IDReseñas INTEGER  NOT NULL AUTO_INCREMENT,
   Nombre VARCHAR(45) NULL,
   Correo VARCHAR(45) NULL,
   Texto VARCHAR(2000) NULL,
-  PRIMARY KEY(IDComentarios)
+  PRIMARY KEY(IDReseñas)
 );
 
 CREATE TABLE Reservas (
