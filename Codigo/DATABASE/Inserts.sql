@@ -21,15 +21,15 @@ INSERT INTO `productos`(`Nombre`, `Descripcion`, `Imagen`, `Precio`, `Cantidad`,
                         'mascarade.jpg',22.99,100,'Estrategia');
 
 INSERT INTO `productos`(`Nombre`, `Descripcion`, `Imagen`, `Precio`, `Cantidad`, `Categoria`) VALUES ('Monopoly','Monopoly es un juego de mesa clásico y fácil de jugar que puede ser disfrutado por 2-8 jugadores. Evita la bancarrota y conviértete en el jugador más rico que juegue para ganar este juego.',
-                        'monopoly.png',40.99,100,'Clásicos');
+                        'monopoly.png',40.99,100,'Clasicos');
 
 INSERT INTO `productos`(`Nombre`, `Descripcion`, `Imagen`, `Precio`, `Cantidad`, `Categoria`) VALUES ('Parchis','El Parchís es un juego de carreras, heredero del juego de origen indio denominado Parchisi.
                                     \n Se utilizan dados para determinar el avance que las fichas realizan a través de un recorrido en forma de cruz. El objetivo es completar el recorrido con todas las fichas.',
-                        'parchis.jpg',15.99,100,'Clásicos');
+                        'parchis.jpg',15.99,100,'Clasicos');
 
 INSERT INTO `productos`(`Nombre`, `Descripcion`, `Imagen`, `Precio`, `Cantidad`, `Categoria`) VALUES ('Ajedrez','El ajedrez es un juego que se desarrolla sobre un tablero y que enfrenta a dos personas. Cada jugador cuenta con dieciséis piezas que puede desplazar, respetando ciertas reglas, sobre el tablero que está dividido en sesenta y cuatro casilleros, conocidos como escaques.
                                         \n Dichas piezas son un rey, una reina, dos torres, dos caballos, dos alfiles y ocho peones. El objetivo es llegar a derrocar al rey del rival, para lo cual es posible capturar a las diversas piezas del contrario.',
-                        'ajedrez.jpg',9.99,100,'Clásicos');
+                        'ajedrez.jpg',9.99,100,'Clasicos');
 
 INSERT INTO `productos`(`Nombre`, `Descripcion`, `Imagen`, `Precio`, `Cantidad`, `Categoria`) VALUES ('Pokemon','¡Conviértete en un Entrenador Pokémon y combate contra otros Entrenadores usando increíbles Pokémon en JCC Pokémon! Los Entrenadores usan ataques para dejar Fuera de Combate a los Pokémon del otro y ganar cartas de Premio. El primer jugador en coger las 6 cartas de Premio gana la partida.',
                         'pokemon.jpg',999.99,1000,'TCG');

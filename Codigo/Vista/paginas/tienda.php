@@ -68,45 +68,27 @@
 
                         <div class="row">
 
+
+
+
+                          <?php   
+                          for($i=0; $i < count($Estrategia);$i++){
+                          
+                          ?>
+                          
                           <div class="col-lg-4">
-
                             <div class="card" style="width: 18rem;">
-                              <img src="../Vista/imgs/tienda/catan.png" class="card-img-top" alt="...">
+                            <a href="../Controlador/controladorProducto.php?nombreProducto=<?php echo($Estrategia[$i]->Nombre)?>"><img src="../Vista/imgs/tienda/<?php  echo($Estrategia[$i]->Imagen);?>" class="card-img-top" alt="..."></a>
                               <div class="card-body">
-                                <h5 class="card-title">Catán</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Comprar 45,99€</a>
+                              <a href="../Controlador/controladorProducto.php?nombreProducto=<?php echo($Estrategia[$i]->Nombre)?>" style="color:black"><h5 class="card-title"><?php  echo($Estrategia[$i]->Nombre);?></h5></a>
+                                <a href="#" class="btn btn-primary">Comprar <?php  echo($Estrategia[$i]->Precio);?>€</a>
                               </div>
                             </div>
-
                           </div>
 
-                          <div class="col-lg-4 tjt">
-
-                            <div class="card" style="width: 18rem;">
-                              <img src="../Vista/imgs/tienda/karma.jpg" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">Karmagan</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Comprar 50,00€</a>
-                              </div>
-                            </div>
-
-                          </div>
-
-                          <div class="col-lg-4">
-
-                            <div class="card" style="width: 18rem;">
-                              <img src="../Vista/imgs/tienda/mascarade.jpg" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">Mascarade</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Comprar 22,99€</a>
-                              </div>
-                            </div>
-
-                          </div>
-
+                          <?php 
+                          }
+                          ?>
 
                         </div>
 
@@ -135,44 +117,24 @@
 
                         <div class="row">
 
+                        <?php   
+                          for($i=0; $i < count($Clasicos);$i++){
+                          
+                          ?>
+                          
                           <div class="col-lg-4">
-
                             <div class="card" style="width: 18rem;">
-                              <img src="../Vista/imgs/tienda/monopoly.png" class="card-img-top" alt="...">
+                            <a href="../Controlador/controladorProducto.php?nombreProducto=<?php echo($Clasicos[$i]->Nombre)?>"><img src="../Vista/imgs/tienda/<?php  echo($Clasicos[$i]->Imagen);?>" class="card-img-top" alt="..."></a>
                               <div class="card-body">
-                                <h5 class="card-title">Monopoly</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Comprar 40,99€</a>
+                              <a href="../Controlador/controladorProducto.php?nombreProducto=<?php echo($Estrategia[$i]->Nombre)?>" style="color:black"><h5 class="card-title"><?php  echo($Clasicos[$i]->Nombre);?></h5></a>
+                                <a href="#" class="btn btn-primary">Comprar <?php  echo($Clasicos[$i]->Precio);?>€</a>
                               </div>
                             </div>
-
                           </div>
 
-                          <div class="col-lg-4">
-
-                            <div class="card" style="width: 18rem;">
-                              <img src="../Vista/imgs/tienda/parchis.jpg" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">Parchis</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Comprar 15,99€</a>
-                              </div>
-                            </div>
-
-                          </div>
-
-                          <div class="col-lg-4">
-
-                            <div class="card" style="width: 18rem;">
-                              <img src="../Vista/imgs/tienda/ajedrez.jpg" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">Ajedrez</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Comprar 9,99€</a>
-                              </div>
-                            </div>
-
-                          </div>
+                          <?php 
+                          }
+                          ?>
 
 
                         </div>
@@ -202,44 +164,24 @@
 
                         <div class="row">
 
+                        <?php   
+                          for($i=0; $i < count($TGC);$i++){
+                          
+                          ?>
+                          
                           <div class="col-lg-4">
-
                             <div class="card" style="width: 18rem;">
-                              <img src="../Vista/imgs/tienda/pokemon.jpg" class="card-img-top" alt="...">
+                            <a href="../Controlador/controladorProducto.php?nombreProducto=<?php echo($TGC[$i]->Nombre)?>"><img src="../Vista/imgs/tienda/<?php  echo($TGC[$i]->Imagen);?>" class="card-img-top" alt="..."></a>
                               <div class="card-body">
-                                <h5 class="card-title">Pokemon</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Comprar 999,99€</a>
+                              <a href="../Controlador/controladorProducto.php?nombreProducto=<?php echo($TGC[$i]->Nombre)?>" style="color:black"><h5 class="card-title"><?php  echo($TGC[$i]->Nombre);?></h5></a>
+                                <a href="#" class="btn btn-primary">Comprar <?php  echo($TGC[$i]->Precio);?>€</a>
                               </div>
                             </div>
-
                           </div>
 
-                          <div class="col-lg-4">
-
-                            <div class="card" style="width: 18rem;">
-                              <img src="../Vista/imgs/tienda/yugi.jpg" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">Yu-Gi-Oh</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Comprar 999,99€</a>
-                              </div>
-                            </div>
-
-                          </div>
-
-                          <div class="col-lg-4">
-
-                            <div class="card" style="width: 18rem;">
-                              <img src="../Vista/imgs/tienda/magic.jpg" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">MAGIC The Gathering</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Comprar 999,99€</a>
-                              </div>
-                            </div>
-
-                          </div>
+                          <?php 
+                          }
+                          ?>
 
 
                         </div>
@@ -302,7 +244,6 @@
               </div>
 
             </div>
-/Vista
             <hr>
 
             <div class="card" style="width: 18rem;">
