@@ -14,6 +14,7 @@
                 $stmt->bindParam("horaEntrada", $horaEntrada,PDO::PARAM_STR);
                 $stmt->bindParam("horaSalida", $horaSalida,PDO::PARAM_STR);
                 $stmt->bindParam("participantes", $participantes,PDO::PARAM_STR);
+                $stmt->execute();
                 $db = null;
                 return true;
                 }
@@ -31,6 +32,7 @@
                 $stmt->bindParam("nombre", $nombre,PDO::PARAM_STR);
                 $stmt->bindParam("dia", $dia,PDO::PARAM_STR);
                 $stmt->bindParam("horaEntrada", $horaEntrada,PDO::PARAM_STR);
+                $stmt->execute();
                 $db = null;
                 return true;
                 }
@@ -45,7 +47,8 @@
                 $db = getDB();
                 $stmt = $db->prepare("SELECT Nombre,Dia,HoraEntrada,HoraSalida,participantes FROM reservas"); 
                 $stmt->execute();
-                $data = $stmt->fetch(PDO::FETCH_ASSOC); //User data
+                $data = $stmt->fetch(PDO::FETCH_OBJ); //User data
+                $stmt->execute();
                 return $data;
                 }
                 catch(PDOException $e) {

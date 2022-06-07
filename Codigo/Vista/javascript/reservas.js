@@ -1,5 +1,7 @@
-boton = document.getElementById("botonform");
-boton.addEventListener('click',creaReserva)
+//boton = document.getElementById("botonform");
+//boton.addEventListener('submit',creaReserva)
+
+let formulario = document.getElementById("formularioReservas");
 
 var dia;
 var mes;
@@ -11,11 +13,11 @@ var horaSalida;
 var nombre;
 var personas;
 
-
-function creaReserva(){
-
-
-     dia = document.getElementsByClassName("cal-day__day--selected")[0].innerHTML;
+// EL evento realiza la solicitud
+formulario.addEventListener('submit',function (e) {
+    e.preventDefault();
+    
+    dia = document.getElementsByClassName("cal-day__day--selected")[0].innerHTML;
      mes = document.getElementsByClassName("cal-month__current")[0].innerHTML
      diaCompleto = dia + " " + mes;
 
@@ -31,7 +33,8 @@ function creaReserva(){
 
     personas = document.getElementById('personasInput');
     if (asegurar() && validar()){
-        
+        //El dataform selecciona los datos que quieres mandar del fromulario.
+        var datos = new FormData(formulario)
 
         /*añadir PHP y que inserte
         nombre.value
@@ -41,18 +44,27 @@ function creaReserva(){
         personas.value
         */
 
-        window.location.href = window.location.href + "?nombre=" + nombre.value + "&dia=" + diaCompleto + "&horaEntrada=" + horaEntrada.value + "&horaSalida=" + horaSalida.value + "&personas=" + personas.value;
+        //Agrego el campo fecha al formdata
+        datos.append('fecha',diaCompleto)
 
-
-
-
-
-        alert("reserva guardada")
-
-
+        //Realizar una peticion, es importante indicar la ruta y el metodo, ahora hay que ver el controlador
+        var onRequest = new XMLHttpRequest();
+        onRequest.open("POST","controladorReservas.php",true)
+        onRequest.onload = function(onEvent){
+            if (onRequest.status == 200) {
+                //Aqui se puede poner un redireccionamiento a otra pagina si quieres
+                alert("Subido!!!")
+            } else {
+                alert("Error: "+onRequest.status)
+            }
+        }
+        onRequest.send(datos);
     }
+},false)
 
-}
+
+
+
 
 
 function asegurar(){
