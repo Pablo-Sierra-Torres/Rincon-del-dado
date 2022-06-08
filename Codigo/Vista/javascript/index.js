@@ -30,7 +30,6 @@ function asegurar(){
     return  confirm("confirmas la reseña con estos datos?");
  }
  
-
 function validar(){
     campos = [nombre, correo,texto]
     for (let i = 0; i < campos.length; i++) {
