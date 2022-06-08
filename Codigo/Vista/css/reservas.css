@@ -133,7 +133,7 @@ select,option{
     padding:10px;
     }
 
-#formularioReservas{
+#segundaColumna{
  position:relative;
     top:150px
 }
@@ -163,13 +163,13 @@ select,option{
 
         border-bottom: solid 1px;
 
-        width: 700px;
+        width: 750px;
 
     }
 
     .cal-body__day, .cal-head__day{
 
-        font-size: 45px;
+        font-size: 40px;
         width: 101px;
 
     }
@@ -184,7 +184,7 @@ select,option{
 
         padding: 0;
 
-        width: 710px;
+        width: 760px;
 
     }
 
@@ -195,7 +195,12 @@ select,option{
     }
 
   
-    
+
+
+
+
+
+
 
 }
 
