@@ -21,7 +21,7 @@
         public function anadirCometario($nombre,$correo,$texto) {
             try{
                 $db = getDB();
-                $st = $db->prepare("SELECT IDreseñas FROM resenas WHERE correo = :user"); 
+                $st = $db->prepare("SELECT IDResenas FROM resenas WHERE correo = :user"); 
                 $st->bindParam("user", $nombre,PDO::PARAM_INT);
                 $st->execute();
                 $count=$st->rowCount();

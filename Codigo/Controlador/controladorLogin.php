@@ -1,8 +1,9 @@
 <?php
 session_start();
 $error = false;
+$method = $_SERVER['REQUEST_METHOD'];
 
-    if (isset($_POST['enviar'])) {
+    if ($method == 'POST') {
         include_once '../Modelo/claseUsuario.php';
         include_once './controladorSesion.php';
         $usuario_logeado = new Usuario();

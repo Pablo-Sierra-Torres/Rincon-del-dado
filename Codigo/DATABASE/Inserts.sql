@@ -1,7 +1,7 @@
 -- INSERT INTO `TABLA` (`COLUMNA1`,...,`COLUMNAZ`) VALUES ('VALOR 1',..., 'VALORZ')
 -- insert Usuarios base
 
-INSERT INTO `usuarios`(`Nombre`, `Apellidos`, `Correo`, `Pass`, `CodPos`, `Poblacion`, `Direccion`, `Telefijo`, `Telemovil`, `Notificaciones`) VALUES  ('admin','admin','superusuariogmail.com','03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4','28015','Madrid','Calle de la Esperanza','913456367','623456723','0');
+INSERT INTO `usuarios`(`Nombre`, `Apellidos`, `Correo`, `Pass`, `CodPos`, `Poblacion`, `Direccion`, `Telefijo`, `Telemovil`, `Notificaciones`) VALUES  ('admin','admin','superusuario@gmail.com','03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4','28015','Madrid','Calle de la Esperanza','913456367','623456723','0');
 
 
 -- Insert Productos
