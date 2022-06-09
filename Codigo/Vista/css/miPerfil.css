@@ -5,3 +5,11 @@
 h5{
     color:grey;
 }
+
+#subirimagen {
+    display: none;
+}
+
+#subirimagen + label {
+  color: white;
+}

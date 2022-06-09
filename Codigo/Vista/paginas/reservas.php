@@ -38,7 +38,7 @@
       <!--CABECERA-->
 
       <?php 
-        if(validarSesion()){
+        if(validarSesion() && isset($_COOKIE['UsuarioLogeado'])){
           include '../Vista/partes/cabeceraLogeado.php';
         }else{
           include '../Vista/partes/cabecera.php';

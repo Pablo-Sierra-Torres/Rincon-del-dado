@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="../Vista/css/cabecera.css">
         <link rel="stylesheet" href="../Vista/css/footer.css">
         <link rel="stylesheet" href="../Vista/css/miPerfil.css">
+
         
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
         <script defer src="../Vista/javascript/slider.js"></script>
@@ -27,10 +28,10 @@
       <!--CABECERA-->
 
       <?php 
-        if(validarSesion()){
+        if(validarSesion() && isset($_COOKIE['UsuarioLogeado'])){
           include '../Vista/partes/cabeceraLogeado.php';
         }else{
-          include '../Vista/partes/cabecera.php';
+          header('Location: controladorLogin.php');
         }
       ?>
       
@@ -50,18 +51,19 @@
                     <div class=" input-group mb-3">
                     <?php 
                         //Si el usuario no tiene foto de perfil, se introduce por defecto
-                        // $url= 'Assets/images/candidates/'.$this->get('candidate')->id.'/'.$this->get('candidate')->photo;
-            
-                        /*if (@getimagesize($url)==false) {
-                            $url="Assets/images/candidates/default.png";
+                        $url= '../Vista/imgs/usuarios/'.$datos->ImagenUsuario;
+                        if (@getimagesize($url)==false) {
+                            $url="../Vista/imgs/usuarios/default.png";
                         }
-                        
-                        <div class="profile-img" style="width: 250px; height: 250px; background-size: cover; background-position: center; background-image: url('/<?= $url ?>');">
-                        </div>*/
-                    ?>
-                        <img src="../Vista/imgs/usuarios/default.png" class="imgPerfil" alt="...">
+                        ?>
+                        <img src=<?= $url?> class="imgPerfil" alt="...">
+                        </div>
                         <br><br>
-                        <button type="submit" class="btn btn-danger" name="subir">sube nueva imagen de perfil</button>
+                        <form id="f-camb-foto" name="camfoto" method="POST" action="controladorPerfil.php">
+                        <input type="file" name="subir_imagen" id="subirimagen"  accept="image/png, image/jpeg">
+                        <label for="subirimagen" class="bg-danger">Elige una imagen ...</label>
+                        <button type="button" class="btn btn-danger disabled" name="subir">sube nueva imagen de perfil</button>
+                        </form>
                     </div>
                 </div>
                 <div class="col-lg-5">  
