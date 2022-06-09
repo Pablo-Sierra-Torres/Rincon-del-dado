@@ -22,7 +22,7 @@ include_once '../Modelo/claseComentario.php';
     } else {
         cerrarSesion();
         $comentariosMostrados = new Comentario();
-        $comentariosMostrados->filtrarValoracion(4.5);
+        $comentariosMostrados->obtenerComentarios();
         include_once '../Vista/paginas/index.php';
     }
 
