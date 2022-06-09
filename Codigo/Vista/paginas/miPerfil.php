@@ -20,6 +20,8 @@
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
         <script defer src="../Vista/javascript/slider.js"></script>
         <script defer src="../Vista/javascript/dados.js"></script>
+        <script defer src="../Vista/javascript/jquery-3.6.0.min.js"></script>
+        <script defer src="../Vista/javascript/subirImg.js"></script>
 
     </head>
 
@@ -59,10 +61,10 @@
                         <img src=<?= $url?> class="imgPerfil" alt="...">
                         </div>
                         <br><br>
-                        <form id="f-camb-foto" name="camfoto" method="POST" action="controladorPerfil.php">
-                        <input type="file" name="subir_imagen" id="subirimagen"  accept="image/png, image/jpeg">
+                        <form id="f-camb-foto" name="camfoto" method="POST" action="controladorPerfil.php" enctype="multipart/form-data">
+                        <input type="file" name="subir_imagen" id="subirimagen"   accept="image/png, image/jpeg">
                         <label for="subirimagen" class="bg-danger">Elige una imagen ...</label>
-                        <button type="button" class="btn btn-danger disabled" name="subir">sube nueva imagen de perfil</button>
+                        <button type="submit" class="btn btn-danger" name="subir" id="btn-subirimg" disabled>sube nueva imagen de perfil</button>
                         </form>
                     </div>
                 </div>

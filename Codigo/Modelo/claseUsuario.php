@@ -80,7 +80,21 @@
                 catch(PDOException $e) {
                 echo '{"error":{"text":'. $e->getMessage() .'}}';
                 }
+        }
+        public function actualizarImagen($id,$img) {
+            try{
+                $db = getDB();
+                $stmt = $db->prepare("update usuarios set ImagenUsuario=:img  WHERE IDUsuarios=:id"); 
+                $stmt->bindParam("img", $img,PDO::PARAM_STR);
+                $stmt->bindParam("id", $id,PDO::PARAM_INT);
+                $stmt->execute();
+                $db=null;
+                return true;
                 }
+                catch(PDOException $e) {
+                echo '{"error":{"text":'. $e->getMessage() .'}}';
+                }
+        }
 
     }
 ?>
