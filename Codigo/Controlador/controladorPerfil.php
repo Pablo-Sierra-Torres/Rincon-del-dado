@@ -7,9 +7,19 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 if($method == 'POST') {
     $actualizarUser = new Usuario();
-    $name = $_FILES['subir_imagen']['name'];
-    echo $name;
-    $actualizarUser->actualizarImagen($name,$_SESSION['id']);
+    $name = $_FILES['Subirimagen']['name'];
+    $tmp_name = $_FILES['Subirimagen']['tmp_name'];
+    $actualizarUser->actualizarImagen($_SESSION['id'],$name);
+
+    $ruta = '../Vista/imgs/usuarios/'.$name;
+
+    move_uploaded_file($tmp_name,$ruta);
+    $dataCookie=$actualizarUser->detallesUsuario($_SESSION['id']);
+
+        setcookie("UsuarioLogeado",serialize($dataCookie),time()-36000);
+        setcookie("UsuarioLogeado",serialize($dataCookie),time()+3600,'/');
+    
+    header("Location: controladorPerfil.php");
 } else {
 
     if (validarSesion()) {

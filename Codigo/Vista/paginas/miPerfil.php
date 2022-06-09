@@ -62,7 +62,7 @@
                         </div>
                         <br><br>
                         <form id="f-camb-foto" name="camfoto" method="POST" action="controladorPerfil.php" enctype="multipart/form-data">
-                        <input type="file" name="subir_imagen" id="subirimagen"   accept="image/png, image/jpeg">
+                        <input type="file" name="Subirimagen" id="subirimagen"   accept="image/png, image/jpeg">
                         <label for="subirimagen" class="bg-danger">Elige una imagen ...</label>
                         <button type="submit" class="btn btn-danger" name="subir" id="btn-subirimg" disabled>sube nueva imagen de perfil</button>
                         </form>
