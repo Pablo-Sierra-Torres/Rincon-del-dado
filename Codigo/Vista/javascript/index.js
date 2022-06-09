@@ -27,7 +27,7 @@ formulario.addEventListener('submit', function(e) {
         texto.value
         */
         this.submit()
-        alert("reserva guardada")
+        alert("resena creada")
     }
 
 }, false)
