@@ -19,6 +19,8 @@
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
         <script defer src="../Vista/javascript/slider.js"></script>
         <script defer src="../Vista/javascript/dados.js"></script>
+        <script defer src="../Vista/javascript/registro.js"></script>
+
 
 
     </head>
@@ -93,7 +95,7 @@
                     <span class="input-group-text" id="basic-addon2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill icol" viewBox="0 0 16 16">
                     <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
                     </svg></span>
-                    <input id="pass" type="password" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" name="passd">
+                    <input id="pass" type="password" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" name="passd" required>
                     
                 </div>
               </div>  
@@ -103,7 +105,7 @@
                     <span class="input-group-text" id="basic-addon2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill icol" viewBox="0 0 16 16">
                     <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
                     </svg></span>
-                    <input id="pass2" type="password" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" name="confirmar_passd">
+                    <input id="pass2" type="password" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" name="confirmar_passd" required>
                     
                 </div>
               </div> 
@@ -125,7 +127,7 @@
                     <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope icol" viewBox="0 0 16 16">
                       <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
                     </svg></span>
-                    <input id="Poblacion" type="text" class="form-control" placeholder="Madrid" aria-label="Username" aria-describedby="basic-addon1" name="poblacion" required>
+                    <input id="poblacion" type="text" class="form-control" placeholder="Madrid" aria-label="Username" aria-describedby="basic-addon1" name="poblacion" required>
                 </div>
               </div>   
             </div> 
