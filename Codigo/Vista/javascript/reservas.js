@@ -18,20 +18,19 @@ formulario.addEventListener('submit',function (e) {
     e.preventDefault();
     
     dia = document.getElementsByClassName("cal-day__day--selected")[0].innerHTML;
-     mes = document.getElementsByClassName("cal-month__current")[0].innerHTML
-     diaCompleto = dia + " " + mes;
+    mes = document.getElementsByClassName("cal-month__current")[0].innerHTML
+    diaCompleto = dia + " " + mes;
 
-     selectEntrada = document.getElementById('entrada');
-     horaEntrada = selectEntrada.options[selectEntrada.selectedIndex];
+    selectEntrada = document.getElementById('entrada');
+    horaEntrada = selectEntrada.options[selectEntrada.selectedIndex];
     
-     selectSalida = document.getElementById('salida');
-     horaSalida = selectSalida.options[selectSalida.selectedIndex];
+    selectSalida = document.getElementById('salida');
+    horaSalida = selectSalida.options[selectSalida.selectedIndex];
     
-     nombre = document.getElementById('nombreInput');
-    
+    nombre = document.getElementById('nombreInput');
     //si lo queremos como numero añadir parseInt al .value
-
     personas = document.getElementById('personasInput');
+
     if (asegurar() && validar()){
         //El dataform selecciona los datos que quieres mandar del fromulario.
         var datos = new FormData(formulario)

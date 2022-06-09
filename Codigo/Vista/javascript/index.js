@@ -1,5 +1,7 @@
-boton = document.getElementById("botonform");
-boton.addEventListener('click',creaReserva)
+//boton = document.getElementById("botonform");
+//boton.addEventListener('click',creaReseña)
+
+let formulario = document.getElementById("formularioResenas");
 
 var nombre;
 var correo;
@@ -8,7 +10,11 @@ var texto;
 /*añadir ID a los input en html añadir required y restriccion de pattern de correo*/
 
 
-function creaReseña(){
+formulario.addEventListener('submit',function(e) {
+    e.preventDefault();
+
+
+
     nombre = document.getElementById("nombreInput");
     correo = document.getElementById("correoInput");
     texto = document.getElementById('textoInput');
@@ -24,7 +30,7 @@ function creaReseña(){
         alert("reserva guardada")
     }
 
-}
+},false)
 
 function asegurar(){
     return  confirm("confirmas la reseña con estos datos?");
@@ -77,11 +83,11 @@ function nombreJS(){
 function correoAPI(){
     
     if (correo.validity.valueMissing) {
-        correo.setCustomValidity("Dinos como te llamas");
+        correo.setCustomValidity("Introduce tu correo electronico");
         return false;
     }else if (correo.validity.patternMissmatch){
 
-        correo.setCustomValidity("Direccion de correo no valida");
+        correo.setCustomValidity("Direccion de correo no valida api");
         return false;
     }else{
         return true;
@@ -90,11 +96,11 @@ function correoAPI(){
 
 //comprobar esto
 function correoJS(){
-    let textoValor = texto.value;
+    let correoValor = correo.value;
     let patron  = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
     
-    if(!patron.test(textoValor)){
-        texto.setCustomValidity("Direccion de correo no valido");
+    if(!patron.test(correoValor)){
+        correo.setCustomValidity("Direccion de correo no valido js ");
         return false
     }else{
         return true;

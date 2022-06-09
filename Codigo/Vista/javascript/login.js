@@ -1,17 +1,21 @@
-boton = document.getElementById("botonform");
-boton.addEventListener('click',creaReserva)
+//boton = document.getElementById("botonform");
+//boton.addEventListener('click',creaReserva)
 
-var nombre;
+let formulario = document.getElementById("formularioLogin");
+
+var correo;
 var pass;
 
 //*añadir ID a los input y al boton en html, añadir required
 
 
-function creaReseña(){
-    nombre = document.getElementById("nombreInput");
+formulario.addEventListener('submit',function (e) {
+    e.preventDefault();
+
+    correo = document.getElementById("correoInput");
     pass = document.getElementById("passInput");
        
-    if (asegurar() && validar()){
+    if (validar()){
         
         /*
         comprobacion de php
@@ -20,15 +24,10 @@ function creaReseña(){
         alert("login js validado, borrar este mensaje del codigo al final")
     }
 
-}
-
-function asegurar(){
-    return  confirm("confirmas la reseña con estos datos?");
- }
- 
+}, false);
 
 function validar(){
-    campos = [nombre,pass]
+    campos = [correo,pass]
     for (let i = 0; i < campos.length; i++) {
 
         campos[i].setCustomValidity('');//no deja el mensaje vacio sino el mensaje generico "Completa este campo"
@@ -39,35 +38,42 @@ function validar(){
 }
 
 function validarJS(){
-    return nombreJS() && passJS();
+    return correoJS() && passJS();
 }
 
 function validarAPI(){
-    return nombreAPI() && passAPI();
+    return correoAPI() && passAPI();
 
 }
 
 
-function nombreAPI(){
-    if (nombre.validity.valueMissing) {
-        nombre.setCustomValidity("Nombre de usuario no puede estar vacio");
+function correoAPI(){
+    
+    if (correo.validity.valueMissing) {
+        correo.setCustomValidity("Introduce tu correo electronico");
+        return false;
+    }else if (correo.validity.patternMissmatch){
+
+        correo.setCustomValidity("Direccion de correo no valida api");
         return false;
     }else{
         return true;
     }
 }
 
-
-function nombreJS(){
-    let nombreValor = nombre.value;
-
-    if (nombreValor == '') {
-
-        nombre.setCustomValidity("Nombre de usuario no puede estar vacio");
-        return false;    
+//comprobar esto
+function correoJS(){
+    let correoValor = correo.value;
+    let patron  = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+    
+    if(!patron.test(correoValor)){
+        correo.setCustomValidity("Direccion de correo no valido js ");
+        return false
     }else{
         return true;
     }
+    
+
 }
 
 function passAPI(){
