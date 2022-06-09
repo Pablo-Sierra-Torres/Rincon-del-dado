@@ -40,3 +40,9 @@ INSERT INTO `productos`(`Nombre`, `Descripcion`, `Imagen`, `Precio`, `Cantidad`,
 
 INSERT INTO `productos`(`Nombre`, `Descripcion`, `Imagen`, `Precio`, `Cantidad`, `Categoria`) VALUES ('Magic','En Magic: The Gathering cada jugador, debe derrotar a su enemigo usando sus poderes: criaturas mágicas, artefactos, y encantamientos, extrayendo el poder o maná de sus tierras, algunas también con sus propios poderes.',
                         'magic.jpg',999.99,1000,'TCG');
+
+
+--Insert Reseñas
+
+INSERT INTO `Reseñas`(`Nombre`,`Correo`,`Texto`) VALUES  ('Pablo','superusuariogmail.com','Me encanta esta tienda, siempre tienen lo que necesito');
+INSERT INTO `Reseñas`(`Nombre`,`Correo`,`Texto`) VALUES  ('Fran','superusuario2gmail.com','Los empleados saben aconsejar bien y hay ofertas interesantes');
