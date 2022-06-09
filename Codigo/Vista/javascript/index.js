@@ -10,7 +10,7 @@ var texto;
 /*añadir ID a los input en html añadir required y restriccion de pattern de correo*/
 
 
-boton.addEventListener('click', function(e) {
+formulario.addEventListener('submit', function(e) {
     e.preventDefault();
 
 
@@ -26,7 +26,7 @@ boton.addEventListener('click', function(e) {
         correo.value
         texto.value
         */
-        formulario.submit()
+        this.submit()
         alert("reserva guardada")
     }
 

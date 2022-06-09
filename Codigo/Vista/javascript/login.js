@@ -2,21 +2,21 @@
 //boton.addEventListener('click',creaReserva)
 
 let formulario = document.getElementById("formularioLogin");
-let boton = document.getElementById("botonenviar")
+let boton = document.getElementById("botonenviar");
 var correo;
 var pass;
 
 //*añadir ID a los input y al boton en html, añadir required
 
 
-boton.addEventListener('click', function(e) {
+formulario.addEventListener('submit', function(e) {
     e.preventDefault();
 
     correo = document.getElementById("correoInput");
     pass = document.getElementById("passInput");
 
     if (validar()) {
-        formulario.submit()
+        this.submit();
             /*
             comprobacion de php
             */
