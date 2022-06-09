@@ -41,7 +41,8 @@
                 $db = getDB();
                 $stmt = $db->prepare("SELECT nombre,correo,texto FROM resenas"); 
                 $stmt->execute();
-                $data = $stmt->fetch(PDO::FETCH_OBJ); //Valoracion data
+                $data = $stmt->fetchAll(PDO::FETCH_CLASS); //Valoracion data
+                $db = null;
                 return $data;
                 }
                 catch(PDOException $e) {
