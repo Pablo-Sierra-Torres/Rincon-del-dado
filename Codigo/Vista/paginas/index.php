@@ -165,7 +165,7 @@
           <div id="form" class="col-lg-8">
 
             <h1 style="text-align: center; color: black">Cuentanos</h1>
-          <form id="formularioResenas" action="controladorInicio.php" method="GET">
+          <form id="formularioResenas" action="controladorInicio.php" method="POST">
            <h4>Nombre</h4>
             <div class=" input-group mb-3">
               <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-person-fill" viewBox="0 0 16 16">
