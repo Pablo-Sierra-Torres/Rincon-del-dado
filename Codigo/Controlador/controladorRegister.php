@@ -14,7 +14,7 @@
             
 
 
-            $usuario_registrado->registerUsuario($_POST['nombre'],$_POST['apellidos'],$_POST['correo'],$_POST['passd'],$_POST['codigo_postal'],$_POST['poblacion'],$_POST['direccion'],$_POST['telefonofijo'],$_POST['telefonomovil'],$_POST['telefonomovil'],$_POST['notificaciones']);
+            $usuario_registrado->registerUsuario($_POST['nombre'],$_POST['apellidos'],$_POST['correo'],$_POST['passd'],$_POST['codigo_postal'],$_POST['poblacion'],$_POST['direccion'],$_POST['telefonoFijo'],$_POST['telefonomovil'],$_POST['telefonomovil'],$_POST['notificaciones']);
             
             $dataCookie=$usuario_registrado->detallesUsuario($_SESSION['id']);
             $datos=serialize($dataCookie);
