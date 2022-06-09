@@ -24,6 +24,7 @@ CREATE TABLE Usuarios (
   Telefijo VARCHAR(9) NULL,
   Telemovil VARCHAR(9) NULL,
   Notificaciones VARCHAR(1) NULL,
+  ImagenUsuario Varchar(100) NULL,
   PRIMARY KEY(IDUsuarios)
 );
 
