@@ -9,7 +9,7 @@ function añadeFuncionalidadBotonCompra(){
 
 let Carro = [];
 
-function añadeCarro(evt){
+function anadeCarro(evt){
 
 
     this.id
