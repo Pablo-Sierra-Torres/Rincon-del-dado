@@ -304,112 +304,112 @@
       <?php include '../Vista/partes/footer.php';?> 
        
       <div class="card d-none" style="width:35rem;height:min-cotent;position:absolute;top:30%;left:25%" id="tarjeta-creada">
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end" id="id-cerrar-card">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-square-fill" viewBox="0 0 16 16">
-              <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
-            </svg>
-        </div>
-        <div class="card-body">
-            <div action="" role="form">
-              <div class="form-group">
-              <div class="container">
-                <h5 class="card-title">Confirmar compra</h5>
-                  <label for="id-form-pago" class="form-label"> Metodo de pago <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16">
-                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
-                    <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
-                  </svg></label>
-                  <select  id="selectTipoPago" class="form-select" name="form-pago" id="id-form-pago" aria-label="default">
-                      <option value="0">Selecciona un m&eacute;todo de pago</option>  
-                      <option value="1">Tarjeta de cr&eacute;dito</option>  
-                      <option value="2">Pagar en tienda</option>  
-                  </select>
-                    <div id="opcion-1" class="d-none">
-                      <div class="row">
-                        <div class="col-6">
-                          <label for="id-card-name" class="form-label">Nombre del titular</label>
-                          <input id="" type="text" name="nombre-tarjeta" id="id-nombre-tarjeta" class="form-control" placeholder="Nombre de la tajeta">
-                          <span class="form-text">Nombre completo de la tarjeta</span>    
-                        </div>
-                        <div class="col-6">
-                          <label for="id-card-number" class="form-label">N&uacute;mero del titular</label>
-                          <input type="text" name="numero-tarjeta" id="id-numero-tarjeta" class="form-control" placeholder="Numero de la tajeta">  
-                        </div>
-                      </div>
-      
-                        <div class="row">
-                          <div class="col-6">
-                            <label for="id-fecha-tarjeta" class="form-label">Fecha de caducidad</label>
-                            <input type="text" name="fecha-tarjeta" id="id-fecha-tarjeta" class="form-control" placeholder="Fecha de caducidad">
-                            <span class="form-text"></span>    
-                          </div>
-                          <div class="col-6">
-                            <label for="id-card-cvv" class="form-label">N&uacute;mero CVV</label>
-                            <input type="text" name="cvv-tarjeta" id="id-card-cvv" class="form-control" placeholder="Numero CVV">  
-                          </div>
-                        </div>
-                      <div class="row">
-                        <div class="col-12">
-                          <div class="form-check" style="margin-top:2%;">
-                            <input type="checkbox" class="form-check-input" name="recordar-metodo" id="id-recordar-metodo">
-                            <label class="form-check-label" for="id-recordar-metodo">Guardar datos de tarjeta para la proxima compra</label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="opcion-2" class="d-none">
-                      <div class="row">
-                        <div class="col-6">
-                          <label for="id-nombre-comprador" class="form-label">Nombre</label>
-                          <input type="text" name="nombre-comprador" id="id-nombre-comprador" class="form-control" placeholder="Nombre">   
-                        </div>
-                        <div class="col-6">
-                          <label for="id-apellidos-comprador" class="form-label">Apellidos</label>
-                          <input type="text" name="apellidos-comprador" id="id-apellidos-comprador" class="form-control" placeholder="Apellidos">  
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-6">
-                          <label for="id-fecha-comprador" class="form-label">Fecha</label>
-                          <input type="date" name="fecha-comprador" id="id-fecha-comprador" class="form-control">
-                          <span class="form-text">Seleccione una fecha</span>    
-                        </div>
-                        <div class="col-6">
-                          <label for="id-hora-comprador" class="form-label">Hora</label>
-                          <select name="hora-comprador" id="id-hora-comprador" class="form-select">
-                            <option value="00h" selected>Selecciona una hora</option>
-                            <option value="10h">10:00</option>
-                            <option value="1030h">10:30</option>
-                            <option value="11h">11:00</option>
-                            <option value="1130h">11:30</option>
-                            <option value="12h">12:00</option>
-                            <option value="1230h">12:30</option>
-                            <option value="13h">13:00</option>
-                            <option value="1330h">13:30</option>
-                            <option value="14h">14:00</option>
-                            <option value="16h">16:00</option>
-                            <option value="1630h">16:30</option>
-                            <option value="17h">17:00</option>
-                            <option value="1730h">17:30</option>
-                            <option value="18h">18:00</option>
-                            <option value="1830h">18:30</option>
-                            <option value="19h">19:00</option>
-                            <option value="1930h">19:30</option>
-                            <option value="20h">20:00</option>
-                          </select>  
-                        </div>
-                      </div>
-                    </div>
-                </div>
-              </div>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-top:2%">
-                  <button type="submit" class="btn btn-dark">Continuar con la compra</button>
-                </div>
-                
-              </div>
-            </div>  
-            </form>
-        </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end" id="id-cerrar-card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-square-fill" viewBox="0 0 16 16">
+          <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
+        </svg>
       </div>
+    <div class="card-body">
+        <div action="" role="form">
+          <div class="form-group">
+            <div class="container">
+              <h5 class="card-title">Confirmar compra</h5>
+                <label for="id-form-pago" class="form-label"> Metodo de pago <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16">
+                  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
+                  <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
+                </svg></label>
+                <select  class="form-select" name="form-pago" id="id-form-pago" aria-label="default">
+                    <option value="0">Selecciona un m&eacute;todo de pago</option>  
+                    <option value="1">Tarjeta de cr&eacute;dito</option>  
+                    <option value="2">Pagar en tienda</option>  
+                </select>
+                  <div id="opcion-1" class="d-none">
+                    <div class="row">
+                      <div class="col-6">
+                        <label for="id-card-name" class="form-label">Nombre del titular</label>
+                        <input type="text" name="nombre-tarjeta" id="id-nombre-tarjeta" class="form-control" placeholder="Nombre de la tajeta">
+                        <span class="form-text">Nombre completo de la tarjeta</span>    
+                      </div>
+                      <div class="col-6">
+                        <label for="id-card-number" class="form-label">N&uacute;mero del titular</label>
+                        <input type="text" name="numero-tarjeta" id="id-numero-tarjeta" class="form-control" placeholder="Numero de la tajeta">  
+                      </div>
+                    </div>
+    
+                      <div class="row">
+                        <div class="col-6">
+                          <label for="id-fecha-tarjeta" class="form-label">Fecha de caducidad</label>
+                          <input type="text" name="fecha-tarjeta" id="id-fecha-tarjeta" class="form-control" placeholder="Fecha de caducidad">
+                          <span class="form-text"></span>    
+                        </div>
+                        <div class="col-6">
+                          <label for="id-card-cvv" class="form-label">N&uacute;mero CVV</label>
+                          <input type="text" name="cvv-tarjeta" id="id-card-cvv" class="form-control" placeholder="Numero CVV">  
+                        </div>
+                      </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="form-check" style="margin-top:2%;">
+                          <input type="checkbox" class="form-check-input" name="recordar-metodo" id="id-recordar-metodo">
+                          <label class="form-check-label" for="id-recordar-metodo">Guardar datos de tarjeta para la proxima compra</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="opcion-2" class="d-none">
+                    <div class="row">
+                      <div class="col-6">
+                        <label for="id-nombre-comprador" class="form-label">Nombre</label>
+                        <input type="text" name="nombre-comprador" id="id-nombre-comprador" class="form-control" placeholder="Nombre">   
+                      </div>
+                      <div class="col-6">
+                        <label for="id-apellidos-comprador" class="form-label">Apellidos</label>
+                        <input type="text" name="apellidos-comprador" id="id-apellidos-comprador" class="form-control" placeholder="Apellidos">  
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <label for="id-fecha-comprador" class="form-label">Fecha</label>
+                        <input type="date" name="fecha-comprador" id="id-fecha-comprador" class="form-control">
+                        <span class="form-text">Seleccione una fecha</span>    
+                      </div>
+                      <div class="col-6">
+                        <label for="id-hora-comprador" class="form-label">Hora</label>
+                        <select name="hora-comprador" id="id-hora-comprador" class="form-select">
+                          <option value="00h" selected>Selecciona una hora</option>
+                          <option value="10h">10:00</option>
+                          <option value="1030h">10:30</option>
+                          <option value="11h">11:00</option>
+                          <option value="1130h">11:30</option>
+                          <option value="12h">12:00</option>
+                          <option value="1230h">12:30</option>
+                          <option value="13h">13:00</option>
+                          <option value="1330h">13:30</option>
+                          <option value="14h">14:00</option>
+                          <option value="16h">16:00</option>
+                          <option value="1630h">16:30</option>
+                          <option value="17h">17:00</option>
+                          <option value="1730h">17:30</option>
+                          <option value="18h">18:00</option>
+                          <option value="1830h">18:30</option>
+                          <option value="19h">19:00</option>
+                          <option value="1930h">19:30</option>
+                          <option value="20h">20:00</option>
+                        </select>  
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-top:2%">
+              <button type="submit" class="btn btn-dark">Continuar con la compra</button>
+            </div>
+            
+          </div>
+        </div>  
+        </form>
+    </div>
+  </div>
 
     </body>
 

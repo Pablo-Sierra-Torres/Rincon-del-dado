@@ -18,7 +18,7 @@ function anadeCarro(evt){
 
 }
 
-function muestraCarro()
+function muestraCarro(){}
 
 
 
@@ -28,101 +28,103 @@ function muestraCarro()
 
 
 
+///////////////////////////////////////////////////////////
 //boton = document.getElementById("botonform");
 //boton.addEventListener('click',creaReserva)
 
-let formulario = document.getElementById("formularioLogin");
-
-var correo;
-var pass;
+let formulario = document.getElementById("formularioCompra");
+let boton = document.getElementById("botonTarjeta")
+var nombreTarjeta = document.getElementById("id-nombre-tarjeta");
+var numeroTarjeta = document.getElementById("id-numero-tarjeta");
+var fechaTarjeta = document.getElementById("id-fecha-tarjeta")
+var numeroCVV = document.getElementById("id-card-cvv")
 
 //*añadir ID a los input y al boton en html, añadir required
 
 
-formulario.addEventListener('submit',function (e) {
+boton.addEventListener('click', function(e) {
     e.preventDefault();
 
     correo = document.getElementById("correoInput");
     pass = document.getElementById("passInput");
-       
-    if (validar()){
-        
-        /*
-        comprobacion de php
-        */
 
-        alert("login js validado, borrar este mensaje del codigo al final")
+    if (validar()) {
+        formulario.submit()
+            /*
+            comprobacion de php
+            */
     }
 
 }, false);
 
-function validar(){
-    campos = [correo,pass]
+function validar() {
+    campos = [correo, pass]
     for (let i = 0; i < campos.length; i++) {
 
-        campos[i].setCustomValidity('');//no deja el mensaje vacio sino el mensaje generico "Completa este campo"
+        campos[i].setCustomValidity(''); //no deja el mensaje vacio sino el mensaje generico "Completa este campo"
     }
 
-    return(validarAPI() && validarJS())
+    return (validarAPI() && validarJS())
 
 }
 
-function validarJS(){
+function validarJS() {
     return correoJS() && passJS();
 }
 
-function validarAPI(){
+function validarAPI() {
     return correoAPI() && passAPI();
 
 }
 
 
-function correoAPI(){
-    
+function correoAPI() {
+
     if (correo.validity.valueMissing) {
         correo.setCustomValidity("Introduce tu correo electronico");
         return false;
-    }else if (correo.validity.patternMissmatch){
+    } else if (correo.validity.patternMissmatch) {
 
         correo.setCustomValidity("Direccion de correo no valida api");
         return false;
-    }else{
+    } else {
         return true;
     }
 }
 
 //comprobar esto
-function correoJS(){
+function correoJS() {
     let correoValor = correo.value;
-    let patron  = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-    
-    if(!patron.test(correoValor)){
+    let patron = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+
+    if (!patron.test(correoValor)) {
         correo.setCustomValidity("Direccion de correo no valido js ");
         return false
-    }else{
+    } else {
         return true;
     }
-    
+
 
 }
 
-function passAPI(){
+function passAPI() {
     if (pass.validity.valueMissing) {
         pass.setCustomValidity("Hace falta contraseña");
         return false;
-    }else{
+    } else {
         return true;
     }
 }
-function passJS(){
+
+function passJS() {
 
     let passValor = pass.value;
 
     if (passValor == '') {
 
         pass.setCustomValidity("Hace falta contraseña");
-        return false;    
-    }else{
+        return false;
+    } else {
         return true;
     }
 }
