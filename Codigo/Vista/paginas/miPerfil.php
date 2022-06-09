@@ -67,7 +67,7 @@
                 <div class="col-lg-5">  
                     <div class="row">  
                         <div class="col-lg-12">
-                            <h4> <?php echo $datos->Nombre;?></h4>
+                            <h4> <?php echo ($datos->Nombre." ".$datos->Apellidos);?></h4>
                         </div>
                     </div>
                     <div class="row">        
