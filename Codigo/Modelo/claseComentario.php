@@ -21,27 +21,15 @@
         public function anadirCometario($nombre,$correo,$texto) {
             try{
                 $db = getDB();
-                $st = $db->prepare("SELECT IDResenas FROM resenas WHERE correo = :user"); 
-                $st->bindParam("user", $nombre,PDO::PARAM_INT);
-                $st->execute();
-                $count=$st->rowCount();
-                if($count<1)
-                {
-                $stmt = $db->prepare("INSERT INTO resenas(nombre, correo,texto) VALUES (:user,:correo,:texto)");
-                $stmt->bindParam("user", $nombre,PDO::PARAM_INT);
+                $stmt = $db->prepare("INSERT INTO resenas(nombre,correo,texto) VALUES (:user,:correo,:texto)");
+                $stmt->bindParam("user", $nombre,PDO::PARAM_STR);
                 $stmt->bindParam("correo", $correo,PDO::PARAM_STR);
                 $stmt->bindParam("texto", $texto,PDO::PARAM_STR);
                 $stmt->execute();
                 $db = null;
                 return true;
-                }
-                else
-                {
-                $db = null;
-                return false;
-                }
+            }
                 
-                } 
                 catch(PDOException $e) {
                 echo '{"error":{"text":'. $e->getMessage() .'}}'; 
                 }
