@@ -27,7 +27,7 @@ CREATE TABLE Usuarios (
   PRIMARY KEY(IDUsuarios)
 );
 
-CREATE TABLE Reseñas (
+CREATE TABLE Resenas (
   IDReseñas INTEGER  NOT NULL AUTO_INCREMENT,
   Nombre VARCHAR(45) NULL,
   Correo VARCHAR(45) NULL,

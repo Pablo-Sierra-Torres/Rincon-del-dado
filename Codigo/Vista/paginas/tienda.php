@@ -402,7 +402,7 @@
               </div>
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-top:2%">
-              <button type="submit" class="btn btn-dark">Continuar con la compra</button>
+              <button id="botonTarjeta" type="submit" class="btn btn-dark">Continuar con la compra</button>
             </div>
             
           </div>

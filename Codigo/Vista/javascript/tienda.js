@@ -33,11 +33,12 @@ function muestraCarro(){}
 //boton.addEventListener('click',creaReserva)
 
 let formulario = document.getElementById("formularioCompra");
-let boton = document.getElementById("botonTarjeta")
+let boton = document.getElementById("botonTarjeta");
+var tipoPago = document.getElementById("id-form-pago");
 var nombreTarjeta = document.getElementById("id-nombre-tarjeta");
 var numeroTarjeta = document.getElementById("id-numero-tarjeta");
 var fechaTarjeta = document.getElementById("id-fecha-tarjeta")
-var numeroCVV = document.getElementById("id-card-cvv")
+var numeroCVV = document.getElementById("id-card-cvv");
 
 //*añadir ID a los input y al boton en html, añadir required
 
