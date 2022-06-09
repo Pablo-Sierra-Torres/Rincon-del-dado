@@ -14,8 +14,10 @@ $method = $_SERVER['REQUEST_METHOD'];
                 $datos=serialize($dataCookie);
                 if (isset($_COOKIE['UsuarioLogeado'])) {
                     setcookie("UsuarioLogeado",$datos,time()-3600);
+                } else {
+                    setcookie("UsuarioLogeado",$datos,time()+3600,'/');
                 }
-                setcookie("UsuarioLogeado",$datos,time()+3600,'/');
+                
                 header('Location: ./controladorPerfil.php');
             }
             

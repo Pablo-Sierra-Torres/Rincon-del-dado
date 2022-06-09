@@ -42,7 +42,7 @@ INSERT INTO `productos`(`Nombre`, `Descripcion`, `Imagen`, `Precio`, `Cantidad`,
                         'magic.jpg',999.99,1000,'TCG');
 
 
---Insert Reseñas
+-- Insert Reseñas
 
-INSERT INTO `Reseñas`(`Nombre`,`Correo`,`Texto`) VALUES  ('Pablo','superusuariogmail.com','Me encanta esta tienda, siempre tienen lo que necesito');
-INSERT INTO `Reseñas`(`Nombre`,`Correo`,`Texto`) VALUES  ('Fran','superusuario2gmail.com','Los empleados saben aconsejar bien y hay ofertas interesantes');
+INSERT INTO `Resenas`(`Nombre`,`Correo`,`Texto`) VALUES  ('Pablo','superusuario@gmail.com','Me encanta esta tienda, siempre tienen lo que necesito');
+INSERT INTO `Resenas`(`Nombre`,`Correo`,`Texto`) VALUES  ('Fran','superusuario2gmail.com','Los empleados saben aconsejar bien y hay ofertas interesantes');
