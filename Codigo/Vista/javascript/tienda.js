@@ -51,7 +51,7 @@ var hora;
 formulario.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    selectPago= document.getElementById("id-form-pago").value;
+    
 
     nombreTarjeta = document.getElementById("id-nombre-tarjeta");
     numeroTarjeta = document.getElementById("id-numero-tarjeta");
@@ -75,35 +75,41 @@ formulario.addEventListener('submit', function(e) {
 }, false);
 
 function validar() {
+    selectPago= document.getElementById("id-form-pago").value;
     campos = formulario.elements
     for (let i = 0; i < campos.length; i++) {
 
         campos[i].setCustomValidity(''); //no deja el mensaje vacio sino el mensaje generico "Completa este campo"
     }
     switch (selectPago) {
-        case 0:
+        case "0":
+
             return false;
             
             break;
-        case 1:
-            return (validarJS1())        
+        case "1":
+            return (validarJS1());     
             break;
-        case 2:
-            return (validarJS2())        
+        case "2":
+
+            return (validarJS2());
             break;
 
         default:
+
             return false;
             break;
     }
 }
 
 function validarJS1() {
+    console.log("entro en js1");
+
     return nombreTarjetaJS() && numeroTarjetaJS() && fechaCadJS()  && cvvJS();
 }
 
 function validarJS2() {
-    return nombreJS() && ApellidosJS(), fechaJS() &&  horaJS();
+    return nombreJS() && apellidosJS(), fechaJS() &&  horaJS();
 }
 
 
@@ -130,13 +136,67 @@ function numeroTarjetaJS() {
 }
 
 
-function passJS() {
 
-    let passValor = pass.value;
+function fechaCadJS() {
+    let fechaTarjetaValor = fechaTarjeta.value;
+    if (fechaTarjetaValor == '') {
+        fechaTarjeta.setCustomValidity("Este campo es necesario");
+        return false;
+    } else {
+        return true;
+    }
+}
 
-    if (passValor == '') {
 
-        pass.setCustomValidity("Hace falta contraseña");
+function cvvJS() {
+    let numeroCVVValor = numeroCVV.value;
+    if (numeroCVVValor == '') {
+        numeroCVV.setCustomValidity("Este campo es necesario");
+        return false;
+    } else {
+        return true;
+    }
+}
+
+///parte2
+
+function nombreJS() {
+    let nombreValor = nombre.value;
+    if (nombreValor == '') {
+        nombre.setCustomValidity("Este campo es necesario");
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function apellidosJS() {
+    let apellidosValor = apellidos.value;
+    if (apellidosValor == '') {
+        apellidos.setCustomValidity("Este campo es necesario");
+        return false;
+    } else {
+        return true;
+    }
+}
+
+
+
+function fechaJS() {
+    let fechaValor = fecha.value;
+    if (fechaValor == '') {
+        fecha.setCustomValidity("Este campo es necesario");
+        return false;
+    } else {
+        return true;
+    }
+}
+
+
+function horaJS() {
+    let horaValor = hora.value;
+    if (horaValor == '') {
+        hora.setCustomValidity("Este campo es necesario");
         return false;
     } else {
         return true;
