@@ -32,22 +32,38 @@ function muestraCarro(){}
 //boton = document.getElementById("botonform");
 //boton.addEventListener('click',creaReserva)
 
-let formulario = document.getElementById("formularioCompra");
+let formulario = document.getElementById("formTarjeta");
 let boton = document.getElementById("botonTarjeta");
-var tipoPago = document.getElementById("id-form-pago");
-var nombreTarjeta = document.getElementById("id-nombre-tarjeta");
-var numeroTarjeta = document.getElementById("id-numero-tarjeta");
-var fechaTarjeta = document.getElementById("id-fecha-tarjeta")
-var numeroCVV = document.getElementById("id-card-cvv");
+var selectPago;
+var nombreTarjeta;
+var numeroTarjeta;
+var fechaTarjeta;
+var numeroCVV;
+
+var nombre;
+var apellidos;
+var fecha;
+var hora;
 
 //*añadir ID a los input y al boton en html, añadir required
 
 
-boton.addEventListener('click', function(e) {
+formulario.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    correo = document.getElementById("correoInput");
-    pass = document.getElementById("passInput");
+    selectPago= document.getElementById("id-form-pago").value;
+
+    nombreTarjeta = document.getElementById("id-nombre-tarjeta");
+    numeroTarjeta = document.getElementById("id-numero-tarjeta");
+    fechaTarjeta = document.getElementById("id-fecha-tarjeta")
+    numeroCVV = document.getElementById("id-card-cvv");
+    
+    nombre = document.getElementById("id-nombre-comprador");
+    apellidos = document.getElementById("id-apellidos-comprador");
+    fecha = document.getElementById("id-fecha-comprador");
+    hora = document.getElementById("id-hora-comprador");
+
+
 
     if (validar()) {
         formulario.submit()
@@ -59,63 +75,60 @@ boton.addEventListener('click', function(e) {
 }, false);
 
 function validar() {
-    campos = [correo, pass]
+    campos = formulario.elements
     for (let i = 0; i < campos.length; i++) {
 
         campos[i].setCustomValidity(''); //no deja el mensaje vacio sino el mensaje generico "Completa este campo"
     }
+    switch (selectPago) {
+        case 0:
+            return false;
+            
+            break;
+        case 1:
+            return (validarJS1())        
+            break;
+        case 2:
+            return (validarJS2())        
+            break;
 
-    return (validarAPI() && validarJS())
-
-}
-
-function validarJS() {
-    return correoJS() && passJS();
-}
-
-function validarAPI() {
-    return correoAPI() && passAPI();
-
-}
-
-
-function correoAPI() {
-
-    if (correo.validity.valueMissing) {
-        correo.setCustomValidity("Introduce tu correo electronico");
-        return false;
-    } else if (correo.validity.patternMissmatch) {
-
-        correo.setCustomValidity("Direccion de correo no valida api");
-        return false;
-    } else {
-        return true;
+        default:
+            return false;
+            break;
     }
 }
+
+function validarJS1() {
+    return nombreTarjetaJS() && numeroTarjetaJS() && fechaCadJS()  && cvvJS();
+}
+
+function validarJS2() {
+    return nombreJS() && ApellidosJS(), fechaJS() &&  horaJS();
+}
+
+
 
 //comprobar esto
-function correoJS() {
-    let correoValor = correo.value;
-    let patron = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-
-    if (!patron.test(correoValor)) {
-        correo.setCustomValidity("Direccion de correo no valido js ");
-        return false
-    } else {
-        return true;
-    }
-
-
-}
-
-function passAPI() {
-    if (pass.validity.valueMissing) {
-        pass.setCustomValidity("Hace falta contraseña");
+function nombreTarjetaJS() {
+    let nombreValor = nombreTarjeta.value;
+    if (nombreValor == '') {
+        nombreTarjeta.setCustomValidity("Este campo es necesario");
         return false;
     } else {
         return true;
     }
 }
+
+function numeroTarjetaJS() {
+    let tarjetaValor = numeroTarjeta.value;
+    if (tarjetaValor == '') {
+        numeroTarjeta.setCustomValidity("Este campo es necesario");
+        return false;
+    } else {
+        return true;
+    }
+}
+
 
 function passJS() {
 

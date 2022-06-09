@@ -21,6 +21,8 @@
         <script defer src="../Vista/javascript/dados.js"></script>
         <script defer src="../Vista/javascript/jquery-3.6.0.min.js"></script>
         <script defer src="../Vista/javascript/realizarCompra.js"></script>
+        <script defer src="../Vista/javascript/tienda.js"></script>
+
 
 
     </head>
@@ -310,7 +312,7 @@
         </svg>
       </div>
     <div class="card-body">
-         <form id="formTarjeta" method="POST" action="controladorCompra" >                 
+         <form id="formTarjeta" method="POST" action="controladorCompra.php" >                 
           <div action="" role="form">
             <div class="form-group">
               <div class="container">
@@ -377,7 +379,7 @@
                         <div class="col-6">
                           <label for="id-hora-comprador" class="form-label">Hora</label>
                           <select name="hora-comprador" id="id-hora-comprador" class="form-select">
-                            <option value="00h" selected>Selecciona una hora</option>
+                            <option value="" selected>Selecciona una hora</option>
                             <option value="10h">10:00</option>
                             <option value="1030h">10:30</option>
                             <option value="11h">11:00</option>
