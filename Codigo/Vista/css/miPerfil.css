@@ -12,4 +12,7 @@ h5{
 
 #subirimagen + label {
   color: white;
+  padding: 8px;
+  border-radius: 2px;
+  margin-bottom: 2px;
 }
