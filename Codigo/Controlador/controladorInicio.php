@@ -11,7 +11,7 @@ if($method == 'POST') {
     header('Location: ../index.php');
 } else {
     $comentariosMostrados = new Comentario();
-    $comentariosMostrados->obtenerComentarios();
+    $comentarios = $comentariosMostrados->obtenerComentarios();
     include_once '../Vista/paginas/index.php';
         
  
