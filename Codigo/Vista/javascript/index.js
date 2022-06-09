@@ -27,7 +27,7 @@ formulario.addEventListener('submit', function(e) {
         texto.value
         */
         this.submit()
-        alert("resena creada")
+        alert("reseña creada")
     }
 
 }, false)
