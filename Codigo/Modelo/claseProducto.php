@@ -55,7 +55,20 @@
                 }
         }
 
-        
+         //Select mostrar productos por categoria
+         public function mostrarTodosProductos() {
+            try{
+                $db = getDB();
+                $stmt = $db->prepare("SELECT Nombre,Imagen,Precio,Cantidad FROM productos"); 
+                $stmt->execute();
+                $data = $stmt->fetchAll(PDO::FETCH_CLASS); //User data
+                $db = null;
+                return $data;
+                }
+                catch(PDOException $e) {
+                echo '{"error":{"text":'. $e->getMessage() .'}}';
+                }
+        }
         
 
         //Select mostrar productos en carrito
