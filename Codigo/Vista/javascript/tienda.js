@@ -7,9 +7,18 @@ const total = document.getElementById('total')
 const fragment = document.createDocumentFragment()
 
 
+let lista = {}
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('carrito')) {
+        lista = JSON.parse(localStorage.getItem('carrito'))
+        pintarCard()
+    }
+})
+
 const carrito = document.getElementById('cajatienda')
 
-let lista = {}
+
 
 carrito.addEventListener('click', e => {
     addCarrito(e)
@@ -32,6 +41,8 @@ const pintarCard = () => {
     })
     cards.append(fragment)
     pintarTotal()
+
+    localStorage.setItem('carrito',JSON.stringify(lista))
 }
 
 cards.addEventListener('click', e => {
@@ -111,7 +122,6 @@ const btnAccion = e => {
 
     if(e.target.classList.contains('pse') || e.target.classList.contains('bi-trash')) {
         console.log(e.target)
-        const producto = lista[e.target.id]
         delete lista[e.target.id]
         pintarCard()
     }
