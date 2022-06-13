@@ -13,12 +13,6 @@ var texto;
 formulario.addEventListener('submit', function(e) {
     e.preventDefault();
 
-
-
-    nombre = document.getElementById("nombreInput");
-    correo = document.getElementById("correoInput");
-    texto = document.getElementById('textoInput');
-
     if (asegurar() && validar()) {
 
         /*añadir PHP y que inserte
@@ -37,6 +31,12 @@ function asegurar() {
 }
 
 function validar() {
+    
+
+    nombre = document.getElementById("nombreInput");
+    correo = document.getElementById("correoInput");
+    texto = document.getElementById('textoInput');
+    
     campos = [nombre, correo, texto]
     for (let i = 0; i < campos.length; i++) {
 

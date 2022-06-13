@@ -17,6 +17,18 @@ var hora;
 formulario.addEventListener('submit', function(e) {
     e.preventDefault();
 
+    if (validar()) {
+        formulario.submit()
+            /*
+            comprobacion de php
+            */
+    }
+
+}, false);
+
+function validar() {
+
+    
     
 
     nombreTarjeta = document.getElementById("id-nombre-tarjeta");
@@ -29,19 +41,8 @@ formulario.addEventListener('submit', function(e) {
     fecha = document.getElementById("id-fecha-comprador");
     hora = document.getElementById("id-hora-comprador");
 
-
-
-    if (validar()) {
-        formulario.submit()
-            /*
-            comprobacion de php
-            */
-    }
-
-}, false);
-
-function validar() {
     selectPago= document.getElementById("id-form-pago").value;
+    
     campos = formulario.elements
     for (let i = 0; i < campos.length; i++) {
 
