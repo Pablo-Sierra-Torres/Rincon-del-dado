@@ -12,13 +12,40 @@ var fecha;
 var hora;
 
 //*añadir ID a los input y al boton en html, añadir required
-
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
 
 formulario.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    if (validar()) {
-        formulario.submit()
+    if (validar() &&  getCookie('UsuarioLogeado')) {
+        var onRequest = new XMLHttpRequest();
+        onRequest.open("POST","controladorCompra.php",true)
+        var datos = new FormData(formulario)
+        
+        
+        onRequest.onload = function(onEvent){
+            if (onRequest.status == 200) {
+                //Aqui se puede poner un redireccionamiento a otra pagina si quieres
+                alert("Subido!!!")
+            } else {
+                alert("Error: "+onRequest.status)
+            }
+        }
+        onRequest.send();
             /*
             comprobacion de php
             */
