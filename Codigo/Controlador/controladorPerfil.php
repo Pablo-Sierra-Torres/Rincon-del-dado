@@ -7,8 +7,18 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 if($method == 'POST') {
     if(isset($_POST["cerrarSesion"])) {
-        cerrarSesion();
-        setcookie("UsuarioLogeado",serialize($dataCookie),time()-36000);
+       
+        if (isset($_SERVER['HTTP_COOKIE'])) {
+            $cookies = explode(';', $_SERVER['HTTP_COOKIE']);
+            foreach($cookies as $cookie) {
+                $parts = explode('=', $cookie);
+                $name = trim($parts[0]);
+                setcookie($name, null, time()-3600);
+                setcookie($name, null, time()-3600, '/');
+            }
+        }
+        session_unset();
+        session_destroy();
         header("Location: controladorInicio.php");
     }else{
         $actualizarUser = new Usuario();
@@ -21,7 +31,7 @@ if($method == 'POST') {
         move_uploaded_file($tmp_name,$ruta);
         $dataCookie=$actualizarUser->detallesUsuario($_SESSION['id']);
 
-            setcookie("UsuarioLogeado",serialize($dataCookie),time()-36000);
+            setcookie("UsuarioLogeado",'',time()-36000);
             setcookie("UsuarioLogeado",serialize($dataCookie),time()+3600,'/');
         
         header("Location: controladorPerfil.php");

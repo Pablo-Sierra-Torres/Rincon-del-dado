@@ -7,7 +7,7 @@
         <title>El Rincón del dado</title>
        
         <meta charset="UTF-8">
-
+        <meta http-equiv="Cache-control" content="no-cache">
         <link rel="stylesheet" type="text/css" href="../Vista/bootstrap/css/bootstrap.min.css">
 		    <script src="../Vista/bootstrap/js/bootstrap.min.js"></script>
 

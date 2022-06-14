@@ -14,7 +14,7 @@ $method = $_SERVER['REQUEST_METHOD'];
             if(validarSesion()) {
                 $dataCookie=$usuario_logeado->detallesUsuario($_SESSION['id']);
                 if (isset($_COOKIE['UsuarioLogeado'])) {
-                    setcookie("UsuarioLogeado",serialize($dataCookie),time()-3600);
+                    setcookie("UsuarioLogeado",'',time()-36000);
 
                 } else {
                     setcookie("UsuarioLogeado",serialize($dataCookie),time()+3600,'/');
