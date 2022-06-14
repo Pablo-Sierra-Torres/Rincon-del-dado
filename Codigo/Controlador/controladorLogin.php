@@ -14,22 +14,21 @@ $method = $_SERVER['REQUEST_METHOD'];
             if(validarSesion()) {
                 $dataCookie=$usuario_logeado->detallesUsuario($_SESSION['id']);
                 if (isset($_COOKIE['UsuarioLogeado'])) {
-<<<<<<< Updated upstream
                     setcookie("UsuarioLogeado",'',time()-36000);
-=======
-                    setcookie("UsuarioLogeado","",time()-3600);
->>>>>>> Stashed changes
 
                 } else {
                     setcookie("UsuarioLogeado",serialize($dataCookie),time()+3600,'/');
                 }
-                
-                header('Location: ./controladorPerfil.php');
-
+                if($dataCookie->Correo=="superusuario@gmail.com"){
+                    header('Location: ./controladorAdmin.php');
                 }else{
-                    setcookie("UsuarioLogeado",serialize($dataCookie),time()+3600,'/');
                     header('Location: ./controladorPerfil.php');
-                }
+                }  
+
+            }else{
+                setcookie("UsuarioLogeado",serialize($dataCookie),time()+3600,'/');
+                header('Location: ./controladorPerfil.php');
+            }
 
         } else {
             $error = true;
