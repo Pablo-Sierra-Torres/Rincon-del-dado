@@ -45,6 +45,7 @@
 
           <div class="col-lg-12" id="cajalogin">
 
+
             <h4>Reponer producto</h4>
 
             <form id = "formularioReponer" method="POST" action="">
@@ -82,10 +83,14 @@
               
               <button type="submit" class="btn btn-danger" name="enviar" id="delProduct">Eliminar</button>
               </div>    
-            </div>
             </form>
+            <br>
+            <hr>
+            <br> 
+            <form name="cerrar" method="POST" action="controladorAdmin.php">          
+                <button type="submit" class="btn btn-danger" name="cerrarSesion" id="cerrar">Cerrar sesión</button>
+            </form>               
           </div>
-
         </div>
         
       </div>

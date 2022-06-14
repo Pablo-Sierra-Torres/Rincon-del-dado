@@ -20,7 +20,7 @@
             $datos=serialize($dataCookie);
             
             if (isset($_COOKIE['UsuarioLogeado'])) {
-                setcookie("UsuarioLogeado",$datos,time()-3600);
+                setcookie("UsuarioLogeado","",time()-3600);
             }
 
             setcookie("UsuarioLogeado",$datos,time()+3600,'/');

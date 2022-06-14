@@ -7,6 +7,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 if($method == 'POST') {
     if(isset($_POST["cerrarSesion"])) {
+<<<<<<< Updated upstream
        
         if (isset($_SERVER['HTTP_COOKIE'])) {
             $cookies = explode(';', $_SERVER['HTTP_COOKIE']);
@@ -19,6 +20,10 @@ if($method == 'POST') {
         }
         session_unset();
         session_destroy();
+=======
+        setcookie("UsuarioLogeado","",time()-60);
+        cerrarSesion();
+>>>>>>> Stashed changes
         header("Location: controladorInicio.php");
     }else{
         $actualizarUser = new Usuario();
