@@ -8,9 +8,11 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 if ($method == 'POST') {
     $compraNueva = new Compra();
-    $str_json = file_get_contents('php://input');
-    $response = json_decode($str_json);
-    echo $response->{"Mascarade"};
+
+    $dia = date("d-m-Y");
+    $hora = date("H:i:s"); 
+    $compraNueva->anadirCompra($_SESSION['id'],$_POST['Productos'],$dia,$hora,floatval($_POST['Precios']));
+
 }else {
 
     $productos=new Producto();
