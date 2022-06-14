@@ -5,7 +5,7 @@ var nombreTarjeta;
 var numeroTarjeta;
 var fechaTarjeta;
 var numeroCVV;
-
+const ListaProductos =[];
 var nombre;
 var apellidos;
 var fecha;
@@ -35,8 +35,15 @@ formulario.addEventListener('submit', function(e) {
         var onRequest = new XMLHttpRequest();
         onRequest.open("POST","controladorCompra.php",true)
         var datos = new FormData(formulario)
+        let precios =  document.querySelector('#T-precio').textContent;
+        let productos = document.querySelectorAll('#objetos');
         
-        
+        productos.forEach(e => {
+            ListaProductos.push(e.textContent)
+        });
+
+        datos.append("Productos",ListaProductos.toString())
+        datos.append("Precios",precios.slice(6,-1))
         onRequest.onload = function(onEvent){
             if (onRequest.status == 200) {
                 //Aqui se puede poner un redireccionamiento a otra pagina si quieres
@@ -45,7 +52,7 @@ formulario.addEventListener('submit', function(e) {
                 alert("Error: "+onRequest.status)
             }
         }
-        onRequest.send();
+        onRequest.send(datos);
             /*
             comprobacion de php
             */

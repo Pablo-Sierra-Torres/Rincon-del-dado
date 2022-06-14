@@ -55,8 +55,6 @@ CREATE TABLE Compra (
   Hora DATETIME NULL,
   Precio INTEGER NULL,
   PRIMARY KEY(IDCompra, Usuarios_IDUsuarios, Productos_Nombre),
-  FOREIGN KEY(Productos_Nombre)
-    REFERENCES Productos(Nombre),
   FOREIGN KEY(Usuarios_IDUsuarios)
     REFERENCES Usuarios(IDUsuarios)
 );
