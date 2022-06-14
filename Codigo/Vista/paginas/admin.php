@@ -39,7 +39,7 @@
       
       <!--CUERPO-->
 
-      <div class="container">
+      <div class="container" style="margin-bottom:100px;">
 
         <div class="row" id="cv">
 
@@ -47,7 +47,7 @@
 
             <h4>Reponer producto</h4>
 
-            <form id = "formularioReponer" method="POST" action="controladorLogin.php">
+            <form id = "formularioReponer" method="POST" action="">
             <div class="row">
               <div class="col-lg-6">  
               <h5>Nombre producto</h5>
@@ -68,10 +68,12 @@
                 
             </div>
             </form>
+            <br>
             <hr>
+            <br>
             <h4>Eliminar producto</h4>
 
-            <form id = "formularioReponer" method="POST" action="controladorLogin.php">
+            <form id = "formularioReponer" method="POST" action="">
             <div class="row">
               <h5>Nombre del producto a eliminar</h5>
               <div class=" input-group mb-3"> 
@@ -82,12 +84,10 @@
               </div>    
             </div>
             </form>
-
           </div>
 
         </div>
         
-
       </div>
       <!--FOOTER-->
       

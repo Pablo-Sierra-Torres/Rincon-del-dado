@@ -60,6 +60,7 @@
                         ?>
                         <img src=<?= $url?> class="imgPerfil" alt="...">
                         </div>
+                        <div class=" input-group mb-3">
                         <br><br>
                         <form id="f-camb-foto" name="camfoto" method="POST" action="controladorPerfil.php" enctype="multipart/form-data">
                         <input type="file" name="Subirimagen" id="subirimagen"   accept="image/png, image/jpeg">
@@ -77,6 +78,11 @@
                     <div class="row">        
                         <div class="col-lg-12">      
                             <h6>descripción super descriptiva</h6>
+                        </div>    
+                    </div>
+                    <div class="row">        
+                        <div class="col-lg-12">      
+                        <button type="submit" class="btn btn-danger" name="enviar" id="cerrar">Cerrar sesión</button>
                         </div>    
                     </div>
                 </div>  
