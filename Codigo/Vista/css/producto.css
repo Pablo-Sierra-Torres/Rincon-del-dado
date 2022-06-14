@@ -5,14 +5,6 @@
 h5{
     color:grey;
 }
-#comprarPro{
-    font-size:20px;
-    height: 50px;
-    width:200px;
-    position:relative;
-    top: 45px;
-    left:30px;
-}
 #btnToLeft{
     position:relative;
     top: 25px;
@@ -28,14 +20,6 @@ h5{
     .container{
         position:relative;
         left:140px;
-    }
-    #comprarPro{
-        font-size:20px;
-        height: 50px;
-        width:200px;
-        position:relative;
-        top: -85px;
-        left:200px;
     }
     #btnToLeft{
         position:relative;

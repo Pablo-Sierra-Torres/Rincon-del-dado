@@ -61,7 +61,7 @@
               <h5>Cantidad</h5>
               <div class=" input-group mb-3">
                 
-                <input id="cantidad1t" type="number" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" name="pass" required>
+                <input id="cantidad" type="number" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" name="pass" required>
                 
               </div>
               </div>

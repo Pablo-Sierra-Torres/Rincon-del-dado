@@ -71,11 +71,6 @@
                             <a href="../Controlador/controladorCompra.php"><img src="../Vista/imgs/recursos/left-arrow.png"></a>
                           </button>
                         </div> 
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <button type="submit" id="comprarPro" class="btn btn-danger" name="subir">añadir al carrito</button>
-                        </div> 
                     </div> 
                   </div>  
             </div>
