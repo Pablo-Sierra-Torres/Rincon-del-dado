@@ -19,13 +19,16 @@ $method = $_SERVER['REQUEST_METHOD'];
                 } else {
                     setcookie("UsuarioLogeado",serialize($dataCookie),time()+3600,'/');
                 }
-                
-                header('Location: ./controladorPerfil.php');
-
+                if($dataCookie->Correo=="superusuario@gmail.com"){
+                    header('Location: ./controladorAdmin.php');
                 }else{
-                    setcookie("UsuarioLogeado",serialize($dataCookie),time()+3600,'/');
                     header('Location: ./controladorPerfil.php');
-                }
+                }  
+
+            }else{
+                setcookie("UsuarioLogeado",serialize($dataCookie),time()+3600,'/');
+                header('Location: ./controladorPerfil.php');
+            }
 
         } else {
             $error = true;
