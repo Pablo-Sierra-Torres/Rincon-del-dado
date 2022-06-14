@@ -12,11 +12,11 @@ $operacion= new Producto();
 
 if($method == 'POST') {
     if(isset($_POST["addProduct"])) {
-        $operacion.productoReponer($_POST['nombreProducto1'],$_POST['cantidad']);
+        $operacion->productoReponer($_POST['nombreproducto1'],$_POST['cantidad']);
     }
     
     if(isset($_POST["delProduct"])) {
-        $operacion.productoBorrar($_POST['nombreProducto2']);
+        $operacion->productoBorrar($_POST['nombreproducto2']);
     }
 
 
