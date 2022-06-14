@@ -81,8 +81,10 @@
                         </div>    
                     </div>
                     <div class="row">        
-                        <div class="col-lg-12">      
-                        <button type="submit" class="btn btn-danger" name="enviar" id="cerrar">Cerrar sesión</button>
+                        <div class="col-lg-12">
+                        <form name="cerrar" method="POST" action="controladorPerfil.php" >          
+                            <button type="submit" class="btn btn-danger" name="cerrarSesion" id="cerrar">Cerrar sesión</button>
+                        </form>
                         </div>    
                     </div>
                 </div>  

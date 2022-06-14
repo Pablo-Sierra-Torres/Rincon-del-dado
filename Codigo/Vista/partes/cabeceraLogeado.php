@@ -56,12 +56,12 @@
             <li class="limenu">
             <?php 
                 if($datos->Correo=="superusuario@gmail.com"){
-                  $link="controladorAdmin.php";
+                  $link="../Controlador/controladorAdmin.php";
                 }else{
-                  $link="controladorPerfil.php";
+                  $link="../Controlador/controladorPerfil.php";
                 }
             ?>
-              <a class="menuitem" href="../Controlador/controladorPerfil.php">
+              <a class="menuitem" href=<?= $link?>>
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle icomenu" viewBox="0 0 16 16">
                   <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
