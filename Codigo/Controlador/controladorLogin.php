@@ -27,7 +27,10 @@ $method = $_SERVER['REQUEST_METHOD'];
                     header('Location: ./controladorPerfil.php');
                 }
 
-            }
+        } else {
+            $error = true;
+            include_once '../Vista/paginas/login.php';            
+        }
             
             
         } else {
