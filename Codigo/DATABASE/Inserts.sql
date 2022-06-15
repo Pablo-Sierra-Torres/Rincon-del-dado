@@ -48,6 +48,6 @@ INSERT INTO `productos`(`Nombre`, `Descripcion`, `Imagen`, `Precio`, `Cantidad`,
 
 INSERT INTO `Resenas`(`Nombre`,`Correo`,`Texto`) VALUES  ('Pablo','superusuario@gmail.com','Me encanta esta tienda, siempre tienen lo que necesito');
 
-INSERT INTO `Resenas`(`Nombre`,`Correo`,`Texto`) VALUES  ('Pablo','superusuariogmail.com','Me encanta esta tienda, siempre tienen lo que necesito');
+INSERT INTO `Resenas`(`Nombre`,`Correo`,`Texto`) VALUES  ('Juan Carlos','superusuariogmail.com','Es una tienda muy comoda y esta bien ubicada');
 
 INSERT INTO `Resenas`(`Nombre`,`Correo`,`Texto`) VALUES  ('Fran','superusuario2gmail.com','Los empleados saben aconsejar bien y hay ofertas interesantes');

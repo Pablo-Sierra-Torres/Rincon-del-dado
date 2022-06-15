@@ -11,8 +11,9 @@ function mensajeAñadir(e){
 
     let juego = document.getElementById("nombreproducto1").value;
     let cantidad = document.getElementById("cantidad").value;
-
-    alert(`Añadidos ${cantidad} unidades de ${juego}`);
+    if(juego!= ""  && cantidad!=""){
+        alert(`Añadidos ${cantidad} unidades de ${juego}`);
+    } 
 }
 
 function mensajeEliminar(e){
@@ -21,5 +22,7 @@ function mensajeEliminar(e){
 
     let juego = document.getElementById("nombreproducto2").value;
 
-    alert(` ${juego} eliminado de la base de datos`);
+    if(juego!= ""){
+        alert(` ${juego} eliminado de la base de datos`);
+    } 
 }

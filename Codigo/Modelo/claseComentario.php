@@ -39,7 +39,7 @@
         public function obtenerComentarios() {
             try{
                 $db = getDB();
-                $stmt = $db->prepare("SELECT nombre,correo,texto FROM resenas"); 
+                $stmt = $db->prepare("SELECT nombre,correo,texto FROM resenas ORDER BY  IDReseñas DESC LIMIT 3 "); 
                 $stmt->execute();
                 $data = $stmt->fetchAll(PDO::FETCH_CLASS); //Valoracion data
                 $db = null;
