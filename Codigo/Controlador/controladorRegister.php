@@ -29,7 +29,7 @@
             $error = true;
         }
              } else {
-                include_once '../Vista/paginas/registro.php';         
+                include_once '../Vista/paginas/registro.php';
             $error = true;
     }
 
