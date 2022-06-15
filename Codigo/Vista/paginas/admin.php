@@ -60,11 +60,11 @@
               <h5>Cantidad</h5>
               <div class=" input-group mb-3">
                 
-                <input id="cantidad" type="number" class="form-control" name="cantidad" placeholder="" required>
+                <input id="cantidad" type="number" class="form-control" name="cantidad" placeholder="" min="1" required>
                 
               </div>
               </div>
-              <button id="btnAñadir" type="submit" class="btn btn-danger" name="addProduct" id="addProduct">Añadir</button>
+              <button id="btnAñadir" type="submit" class="btn btn-danger" name="addProduct" id="addProduct" >Añadir</button>
                 
             </div>
             </form>
