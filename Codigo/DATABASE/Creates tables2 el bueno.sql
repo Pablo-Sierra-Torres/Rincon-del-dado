@@ -52,7 +52,7 @@ CREATE TABLE Compra (
   Productos_Nombre VARCHAR(500) NOT NULL,
   Dia VARCHAR(20) NULL,
   Hora VARCHAR(20) NULL,
-  Precio FLOAT NULL,
+  Precio FLOAT(10,2) NULL,
   PRIMARY KEY(IDCompra, Usuarios_IDUsuarios, Productos_Nombre),
   FOREIGN KEY(Usuarios_IDUsuarios)
     REFERENCES Usuarios(IDUsuarios)
