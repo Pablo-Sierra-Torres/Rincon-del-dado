@@ -77,7 +77,7 @@
                     </div>
                     <div class="row">        
                         <div class="col-lg-12">      
-                            <h6>descripción super descriptiva</h6>
+                            <h6>B I E N V E N I D O</h6>
                         </div>    
                     </div>
                     <div class="row">        
