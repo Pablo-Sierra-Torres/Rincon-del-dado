@@ -50,9 +50,9 @@ CREATE TABLE Compra (
 	IDCompra INTEGER  NOT NULL AUTO_INCREMENT,
   Usuarios_IDUsuarios INTEGER  NOT NULL,
   Productos_Nombre VARCHAR(500) NOT NULL,
-  Dia DATE NULL,
-  Hora DATETIME NULL,
-  Precio INTEGER NULL,
+  Dia VARCHAR(20) NULL,
+  Hora VARCHAR(20) NULL,
+  Precio FLOAT NULL,
   PRIMARY KEY(IDCompra, Usuarios_IDUsuarios, Productos_Nombre),
   FOREIGN KEY(Usuarios_IDUsuarios)
     REFERENCES Usuarios(IDUsuarios)
