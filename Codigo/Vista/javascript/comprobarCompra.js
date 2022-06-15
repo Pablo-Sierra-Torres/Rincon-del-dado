@@ -57,6 +57,8 @@ formulario.addEventListener('submit', function(e) {
             /*
             comprobacion de php
             */
+    } else {
+        alert('Necesitas estar registrado')
     }
 
 }, false);
