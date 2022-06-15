@@ -6,7 +6,8 @@ INSERT INTO `usuarios`(`Nombre`, `Apellidos`, `Correo`, `Pass`, `CodPos`, `Pobla
 
 -- Insert Productos
 
-INSERT INTO `productos`(`Nombre`, `Descripcion`, `Imagen`, `Precio`, `Cantidad`, `Categoria`) VALUES ('Catán','Sois los primeros colonos en llegar a la isla de Catan. Muy pronto empiezan a aparecer los primeros poblados y las primeras carreteras, mientras que los fértiles terrenos os aportan abundantes materias primas.
+INSERT INTO `productos`(`Nombre`, `Descripcion`, `Imagen`, `Precio`, `Cantidad`, `Categoria`) 
+VALUES ('Catán','Sois los primeros colonos en llegar a la isla de Catan. Muy pronto empiezan a aparecer los primeros poblados y las primeras carreteras, mientras que los fértiles terrenos os aportan abundantes materias primas.
                                     \n Poco a poco el comercio florece y los poblados se convierten en ciudades.
                                     \n Pero enseguida el espacio en la isla empieza a escasear y se desata una encarnizada disputa por las tierras, los recursos y el poder.
                                     \n ¡No tendrás otra opción que planificar con astucia, comerciar con picardía y confiar en tu suerte!',
