@@ -19,7 +19,6 @@
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
         <script defer src="../Vista/javascript/slider.js"></script>
         <script defer src="../Vista/javascript/dados.js"></script>
-        <script defer src="../Vista/javascript/admin.js"></script>
 
 
 
