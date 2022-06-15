@@ -58,7 +58,7 @@
               <div>
                 <h2 class="h2slider">CATÁN, Nuestro TOP ventas</h2>
             <p>Se trata de un juego que aúna la estrategia, la astucia y la capacidad para negociar y en el que los jugadores tratan de colonizar una isla Construyendo pueblos, estableciendo rutas comerciales, etc…</p>
-            <a href="#" class="btnSlider">Ver más</a>
+            <a href="controladorCompra.php" class="btnSlider">Ver más</a>
           </div>
             </div>
           </li>
@@ -67,7 +67,7 @@
               <div>
                 <h2 class="h2slider">Warhammer</h2>
             <p>Warhammer es un juego de guerra en miniatura que simula batallas entre ejércitos mediante el uso de figuritas en miniatura.</p>
-            <a href="#" class="btnSlider">Ver más</a>
+            <a href="controladorCompra.php" class="btnSlider">Ver más</a>
           </div>
             </div>
           </li>
