@@ -13,6 +13,7 @@ $operacion= new Producto();
 if($method == 'POST') {
     if(isset($_POST["addProduct"])) {
         $operacion->productoReponer($_POST['nombreproducto1'],$_POST['cantidad']);
+        
     }
     
     if(isset($_POST["delProduct"])) {
