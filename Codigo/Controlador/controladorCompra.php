@@ -11,7 +11,7 @@ if ($method == 'POST') {
 
     $dia = date("d-m-Y");
     $hora = date("H:i:s"); 
-    $compraNueva->anadirCompra($_SESSION['id'],$_POST['Productos'],$dia,$hora,(double)filter_var($_POST['Precios'], FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION));
+    $compraNueva->anadirCompra($_SESSION['id'],$_POST['Productos'],$dia,$hora,floatval($_POST['Precios']));
 
 }else {
 
