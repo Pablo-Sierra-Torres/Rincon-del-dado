@@ -4,6 +4,7 @@ const templateTotal = document.getElementById('template-end').content
 const cards = document.getElementById('cards')
 const total = document.getElementById('total')
 
+
 const fragment = document.createDocumentFragment()
 
 
@@ -58,7 +59,7 @@ const pintarCard = () => {
     cards.innerHTML = ''
     Object.values(lista).forEach(producto => {
         templateCard.querySelector('.card-title').textContent = producto.title
-        templateCard.querySelector('.pbt').textContent = (producto.cantidad * (producto.precio).toFixed(2)).toString()+ ' €'
+        templateCard.querySelector('.pbt').textContent = (parseFloat(producto.cantidad * (producto.precio)).toFixed(2)).toString()+ ' €'
         templateCard.querySelector('.text-center').textContent = producto.cantidad
         templateCard.querySelectorAll('.btn-danger')[0].setAttribute("id",producto.id)
         templateCard.querySelectorAll('.btn-danger')[1].setAttribute("id",producto.id)
@@ -115,7 +116,8 @@ const setLista = objeto => {
         id: objeto.querySelector('.btn-primary').id,
         title: objeto.querySelector('.card-title').textContent,
         precio: parseFloat(objeto.querySelector('.d-none').textContent),
-        cantidad:1
+        cantidad:1,
+        cantidadT: 
     } 
 
     if (lista.hasOwnProperty(productoN.id)) {
