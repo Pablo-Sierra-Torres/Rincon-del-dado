@@ -9,7 +9,7 @@ var texto;
 
 /*añadir ID a los input en html añadir required y restriccion de pattern de correo*/
 
-
+boton.addEventListener('click',validar);
 formulario.addEventListener('submit', function(e) {
     e.preventDefault();
 

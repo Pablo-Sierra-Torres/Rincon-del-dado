@@ -1,5 +1,4 @@
-//boton = document.getElementById("botonform");
-//boton.addEventListener('submit',creaReserva)
+let boton = document.getElementById("botonform");
 
 let formulario = document.getElementById("formularioReservas");
 
@@ -12,6 +11,8 @@ var selectSalida;
 var horaSalida;
 var nombre;
 var personas;
+
+boton.addEventListener('click',validar)
 
 // EL evento realiza la solicitud
 formulario.addEventListener('submit',function (e) {

@@ -16,7 +16,7 @@ var movil;
 
 //*añadir ID a los input y al boton en html, añadir required
 
-
+boton.addEventListener('click',validar);
 formulario.addEventListener('submit', function(e) {
     e.preventDefault();
 

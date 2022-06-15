@@ -28,6 +28,7 @@ function getCookie(cname) {
     return "";
   }
 
+boton.addEventListener('click',validar);
 formulario.addEventListener('submit', function(e) {
     e.preventDefault();
 

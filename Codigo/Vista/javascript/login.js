@@ -1,5 +1,3 @@
-//boton = document.getElementById("botonform");
-//boton.addEventListener('click',creaReserva)
 
 let formulario = document.getElementById("formularioLogin");
 let boton = document.getElementById("botonenviar");
@@ -8,7 +6,7 @@ var pass;
 
 //*añadir ID a los input y al boton en html, añadir required
 
-
+boton.addEventListener('click',validar);
 formulario.addEventListener('submit', function(e) {
     e.preventDefault();
 
