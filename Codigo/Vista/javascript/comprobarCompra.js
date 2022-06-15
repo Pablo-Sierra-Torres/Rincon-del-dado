@@ -38,11 +38,13 @@ formulario.addEventListener('submit', function(e) {
         var datos = new FormData(formulario)
         let precios =  document.querySelector('#T-precio').textContent;
         let productos = document.querySelectorAll('#objetos');
-        let cantidades = document.getElementById('cantidad').textContent
+        let cantidades = document.querySelectorAll('#cantidad');
         
-        productos.forEach(e => {
-            ListaProductos.push(e.textContent+':'+cantidades)
-        });
+
+
+        for (let i = 0; i < productos.length; i++) {
+            ListaProductos.push(productos[i].textContent+':'+cantidades[i].textContent)
+        }
 
         datos.append("Productos",ListaProductos.toString())
         datos.append("Precios",precios.slice(6,-1))
