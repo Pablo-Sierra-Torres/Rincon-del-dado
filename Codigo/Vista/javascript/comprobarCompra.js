@@ -49,6 +49,7 @@ formulario.addEventListener('submit', function(e) {
             if (onRequest.status == 200) {
                 //Aqui se puede poner un redireccionamiento a otra pagina si quieres
                 alert("Subido!!!")
+                window.location.href = window.location.href
             } else {
                 alert("Error: "+onRequest.status)
             }
@@ -57,6 +58,8 @@ formulario.addEventListener('submit', function(e) {
             /*
             comprobacion de php
             */
+    } else {
+        alert('Se necesita estar logeado')
     }
 
 }, false);

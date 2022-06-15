@@ -32,6 +32,8 @@ function limpiarCampos() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    limpiarCampos();
+    localStorage.setItem('carrito','')
     
     if (!getCookie('UsuarioLogeado')) {
         limpiarCampos();
