@@ -116,8 +116,7 @@ const setLista = objeto => {
         id: objeto.querySelector('.btn-primary').id,
         title: objeto.querySelector('.card-title').textContent,
         precio: parseFloat(objeto.querySelector('.d-none').textContent),
-        cantidad:1,
-        cantidadT: 
+        cantidad:1
     } 
 
     if (lista.hasOwnProperty(productoN.id)) {
