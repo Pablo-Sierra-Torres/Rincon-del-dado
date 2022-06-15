@@ -19,7 +19,7 @@
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
         <script defer src="../Vista/javascript/slider.js"></script>
         <script defer src="../Vista/javascript/dados.js"></script>
-        <script defer src="../Vista/javascript/registro.js"></script>
+        <script defer src="../Vista/javascript/admin.js"></script>
 
 
 
@@ -65,7 +65,7 @@
                 
               </div>
               </div>
-              <button type="submit" class="btn btn-danger" name="addProduct" id="addProduct">Añadir</button>
+              <button id="btnAñadir" type="submit" class="btn btn-danger" name="addProduct" id="addProduct">Añadir</button>
                 
             </div>
             </form>
@@ -81,7 +81,7 @@
                 <input id = "nombreproducto2" type="text" class="form-control" name="nombreproducto2" placeholder="Catán" required>
               </div>
               
-              <button type="submit" class="btn btn-danger" name="delProduct" id="delProduct">Eliminar</button>
+              <button id="btnEliminar" type="submit" class="btn btn-danger" name="delProduct" id="delProduct">Eliminar</button>
               </div>    
             </form>
             <br>
